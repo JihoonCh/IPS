@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:text="[00님의 마이페이지]"/>
+
+
+        <Button
+            android:id="@+id/btnArticle"
+            android:padding="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="내가 쓴 글 보기">
+        </Button>
+        <Button
+            android:id="@+id/btnScrap"
+            android:padding="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="스크랩한 글 보기">
+        </Button>
+        <Button
+            android:id="@+id/btnBookmark"
+            android:padding="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="즐겨찾기 한 식당">
+        </Button>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:padding="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="계정 설정하기">
+        </Button>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnCommunity"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="COMMUNITY" />
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnHome"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="HOME" />
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/btnMyPage"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="MYPAGE" />
+</RelativeLayout>
