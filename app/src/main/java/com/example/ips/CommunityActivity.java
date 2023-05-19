@@ -1,4 +1,4 @@
-package com.example.ips;
+/*package com.example.ips;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -51,4 +51,4 @@ public class CommunityActivity extends AppCompatActivity {
             }
         });
     }
-}
+}*/

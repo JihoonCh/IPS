@@ -1,4 +1,4 @@
-package com.example.ips;
+/*package com.example.ips;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -53,4 +53,4 @@ public class SubActivity extends AppCompatActivity {
             }
         });
     }
-}
+}*/
