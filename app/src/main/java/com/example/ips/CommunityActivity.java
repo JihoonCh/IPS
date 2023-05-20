@@ -31,29 +31,24 @@ public class CommunityActivity extends AppCompatActivity {
         btnReviews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),CReviews.class);
+                Intent intent = new Intent(getApplicationContext(), CReviewsActivity.class);
                 startActivity(intent);
             }
         });
         btnRes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),CRes.class);
+                Intent intent = new Intent(getApplicationContext(), CRecommendActivity.class);
                 startActivity(intent);
             }
         });
         btnTips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),CTips.class);
+                Intent intent = new Intent(getApplicationContext(), CTipsActivity.class);
                 startActivity(intent);
             }
         });
-
-
-
-
-
 
         // 커뮤니티 화면
         btnCommunity.setOnClickListener(new View.OnClickListener() {

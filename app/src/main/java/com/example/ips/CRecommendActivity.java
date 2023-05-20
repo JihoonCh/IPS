@@ -9,15 +9,15 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CTips extends AppCompatActivity {
+public class CRecommendActivity extends AppCompatActivity {
 
-    Button btnCommunity, btnHome, btnMypage;
+    Button btnCommunity, btnHome, btnMypage, btnWrite;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.community_tips);
+        setContentView(R.layout.community_recommend);
 
 
         setTitle("메뉴판-음식추천앱");
@@ -26,6 +26,7 @@ public class CTips extends AppCompatActivity {
         btnCommunity = (Button) findViewById(R.id.btnCommunity);
         btnHome = (Button) findViewById(R.id.btnHome);
         btnMypage = (Button) findViewById(R.id.btnMyPage);
+        btnWrite = (Button) findViewById(R.id.btnWrite);
 
         // 커뮤니티 화면
         btnCommunity.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +50,14 @@ public class CTips extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),SubActivity.class);
+                startActivity(intent);
+            }
+        });
+        // 글쓰기 버튼
+        btnWrite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),WriteActivity.class);
                 startActivity(intent);
             }
         });
