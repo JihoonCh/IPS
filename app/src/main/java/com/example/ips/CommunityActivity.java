@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class CommunityActivity extends AppCompatActivity {
 
     Button btnCommunity, btnHome, btnMypage;
+    Button btntips,btnreviews,btnres;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -19,6 +20,9 @@ public class CommunityActivity extends AppCompatActivity {
 
         setTitle("메뉴판-음식추천앱");
 
+        btntips= (Button) findViewById(R.id.btntips);
+        btnreviews= (Button) findViewById(R.id.btnreviews);
+        btnres= (Button) findViewById(R.id.btnres);
         // 버튼변수에 버튼객체 대입
         btnCommunity = (Button) findViewById(R.id.btnCommunity);
         btnHome = (Button) findViewById(R.id.btnHome);
