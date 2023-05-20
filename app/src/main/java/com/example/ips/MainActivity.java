@@ -7,10 +7,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btnHome, btnMypage;
+    ImageButton btnKeyWord;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,16 @@ public class MainActivity extends AppCompatActivity {
         Button btnCommunity = (Button) findViewById(R.id.btnCommunity);
         btnHome = (Button) findViewById(R.id.btnHome);
         btnMypage = (Button) findViewById(R.id.btnMyPage);
+        btnKeyWord = (ImageButton) findViewById(R.id.btnKeyWord);
+
+        // 음식 카테고리 화면
+        btnKeyWord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // 커뮤니티 화면
         btnCommunity.setOnClickListener(new View.OnClickListener() {

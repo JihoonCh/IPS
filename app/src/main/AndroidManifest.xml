@@ -35,6 +35,7 @@
         <activity android:name=".CReviews"/>
         <activity android:name=".CRes"/>
         <activity android:name=".CTips"/>
+        <activity android:name=".CategoryActivity"/>
 
 
 
