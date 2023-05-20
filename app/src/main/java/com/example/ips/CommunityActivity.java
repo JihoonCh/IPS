@@ -50,11 +50,6 @@ public class CommunityActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
         // 커뮤니티 화면
         btnCommunity.setOnClickListener(new View.OnClickListener() {
             @Override

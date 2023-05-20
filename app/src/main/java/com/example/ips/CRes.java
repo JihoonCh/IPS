@@ -19,7 +19,6 @@ public class CRes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.community_res);
 
-
         setTitle("메뉴판-음식추천앱");
 
         // 버튼변수에 버튼객체 대입
