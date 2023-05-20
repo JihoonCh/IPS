@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnCommunity, btnHome, btnMypage;
+    Button btnHome, btnMypage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setTitle("메뉴판-음식추천앱");
 
         // 버튼변수에 버튼객체 대입
-        btnCommunity = (Button) findViewById(R.id.btnCommunity);
+        Button btnCommunity = (Button) findViewById(R.id.btnCommunity);
         btnHome = (Button) findViewById(R.id.btnHome);
         btnMypage = (Button) findViewById(R.id.btnMyPage);
 
@@ -52,10 +52,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-
-
-
-
 
 
 

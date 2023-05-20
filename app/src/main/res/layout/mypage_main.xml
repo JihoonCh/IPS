@@ -38,11 +38,11 @@
         </Button>
 
         <Button
-            android:id="@+id/btnAccount"
+            android:id="@+id/btnLogout"
             android:padding="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="계정설정하기">
+            android:text="로그아웃하기">
         </Button>
 
     </LinearLayout>

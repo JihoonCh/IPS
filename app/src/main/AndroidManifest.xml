@@ -31,7 +31,6 @@
             android:exported="false" />
         <activity android:name=".SubActivity"/>
         <activity android:name=".CommunityActivity"/>
-
     </application>
 
 </manifest>
