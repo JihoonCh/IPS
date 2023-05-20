@@ -7,37 +7,23 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:gravity="center"
-        android:text="커뮤니티"/>
+        android:text="후기란"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="right|bottom"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="right|bottom">
 
         <Button
-            android:id="@+id/btnTips"
+            android:id="@+id/btnWrite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginBottom="180dp"
-            android:text="꿀팁란"></Button>
+            android:layout_gravity="right"
+            android:layout_marginBottom="60dp"
+            android:text="글쓰기">
 
-        <Button
-            android:id="@+id/btnReviews"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginBottom="170dp"
-            android:text="후기란"></Button>
-
-        <Button
-            android:id="@+id/btnRes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginBottom="160dp"
-            android:text="식당추천"></Button>
+        </Button>
 
 
     </LinearLayout>

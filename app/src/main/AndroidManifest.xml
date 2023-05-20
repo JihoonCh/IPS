@@ -30,7 +30,14 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity android:name=".SubActivity"/>
+
         <activity android:name=".CommunityActivity"/>
+        <activity android:name=".CReviews"/>
+        <activity android:name=".CRes"/>
+        <activity android:name=".CTips"/>
+
+
+
     </application>
 
 </manifest>

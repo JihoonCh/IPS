@@ -1,5 +1,6 @@
 package com.example.ips;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,52 +9,23 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CommunityActivity extends AppCompatActivity {
+public class CTips extends AppCompatActivity {
 
     Button btnCommunity, btnHome, btnMypage;
-    Button btnTips,btnReviews,btnRes;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.community_main);
+        setContentView(R.layout.community_tips);
+
 
         setTitle("메뉴판-음식추천앱");
 
-        btnTips= (Button) findViewById(R.id.btnTips);
-        btnReviews= (Button) findViewById(R.id.btnReviews);
-        btnRes= (Button) findViewById(R.id.btnRes);
         // 버튼변수에 버튼객체 대입
         btnCommunity = (Button) findViewById(R.id.btnCommunity);
         btnHome = (Button) findViewById(R.id.btnHome);
         btnMypage = (Button) findViewById(R.id.btnMyPage);
-
-        btnReviews.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),CReviews.class);
-                startActivity(intent);
-            }
-        });
-        btnRes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),CRes.class);
-                startActivity(intent);
-            }
-        });
-        btnTips.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),CTips.class);
-                startActivity(intent);
-            }
-        });
-
-
-
-
-
 
         // 커뮤니티 화면
         btnCommunity.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +35,6 @@ public class CommunityActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         // 홈화면
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
