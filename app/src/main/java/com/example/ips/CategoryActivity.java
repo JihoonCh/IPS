@@ -41,9 +41,9 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(CategoryActivity.this, NextActivity.class);
-                //intent.putExtra("Food Category", category);
-                //startActivity(intent);
+                Intent intent = new Intent(CategoryActivity.this, AddressActivity.class);
+                intent.putExtra("Food Category", category);
+                startActivity(intent);
             }
         });
 

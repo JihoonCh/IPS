@@ -30,8 +30,9 @@ public class SubActivity extends AppCompatActivity {
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                Intent intent = new Intent(SubActivity.this, LoginActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
