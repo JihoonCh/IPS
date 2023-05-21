@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class CTipsActivity extends AppCompatActivity {
 
-    Button btnCommunity, btnHome, btnMypage, btnWrite;
+    Button btnCommunity, btnHome, btnMypage, btnTipWrite;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -26,7 +26,7 @@ public class CTipsActivity extends AppCompatActivity {
         btnCommunity = (Button) findViewById(R.id.btnCommunity);
         btnHome = (Button) findViewById(R.id.btnHome);
         btnMypage = (Button) findViewById(R.id.btnMyPage);
-        btnWrite = (Button) findViewById(R.id.btnWrite);
+        btnTipWrite = (Button) findViewById(R.id.btnTipWrite);
 
         // 커뮤니티 화면
         btnCommunity.setOnClickListener(new View.OnClickListener() {
@@ -54,10 +54,10 @@ public class CTipsActivity extends AppCompatActivity {
             }
         });
         // 글쓰기 버튼
-        btnWrite.setOnClickListener(new View.OnClickListener() {
+        btnTipWrite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),WriteActivity.class);
+                Intent intent = new Intent(getApplicationContext(), TipWriteActivity.class);
                 startActivity(intent);
             }
         });

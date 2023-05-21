@@ -1,0 +1,279 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" project-jdk-name=\"jbr-17\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,6 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: app/src/main/res/layout/community_tips.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\">\r\n    <TextView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:textSize=\"30dp\"\r\n        android:gravity=\"center\"\r\n        android:text=\"Tips/Etiquette\"/>\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:orientation=\"vertical\"\r\n        android:gravity=\"right|bottom\">\r\n\r\n        <Button\r\n            android:id=\"@+id/btnWrite\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_gravity=\"right\"\r\n            android:layout_marginBottom=\"60dp\"\r\n            android:text=\"Write\">\r\n\r\n        </Button>\r\n\r\n\r\n    </LinearLayout>\r\n\r\n    <Button\r\n        android:layout_alignParentBottom=\"true\"\r\n        android:id=\"@+id/btnCommunity\"\r\n        android:layout_width=\"130dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"COMMUNITY\" />\r\n    <Button\r\n        android:layout_alignParentBottom=\"true\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:id=\"@+id/btnHome\"\r\n        android:layout_width=\"130dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"HOME\" />\r\n    <Button\r\n        android:layout_alignParentBottom=\"true\"\r\n        android:layout_alignParentRight=\"true\"\r\n        android:id=\"@+id/btnMyPage\"\r\n        android:layout_width=\"130dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"MYPAGE\" />\r\n</RelativeLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/community_tips.xml b/app/src/main/res/layout/community_tips.xml
+--- a/app/src/main/res/layout/community_tips.xml	
++++ b/app/src/main/res/layout/community_tips.xml	
+@@ -16,7 +16,7 @@
+         android:gravity="right|bottom">
+ 
+         <Button
+-            android:id="@+id/btnWrite"
++            android:id="@+id/btnTipWrite"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="right"
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\">\r\n    <uses-permission android:name=\"android.permission.INTERNET\"/>\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.IPS\"\r\n        android:enableOnBackInvokedCallback=\"true\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".LoginActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n\r\n        </activity>\r\n\r\n        <activity android:name=\".MainActivity\"\r\n            android:exported=\"false\" />\r\n\r\n        <activity\r\n            android:name=\".RegisterActivity\"\r\n            android:exported=\"false\" />\r\n\r\n        <activity android:name=\".SubActivity\"/>\r\n        <activity android:name=\".CommunityActivity\"/>\r\n        <activity android:name=\".CRecommendActivity\"/>\r\n        <activity android:name=\".CTipsActivity\"/>\r\n        <activity android:name=\".CReviewsActivity\"/>\r\n        <activity android:name=\".WriteActivity\"/>\r\n        <activity android:name=\".CategoryActivity\"/>\r\n\r\n\r\n\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	
++++ b/app/src/main/AndroidManifest.xml	
+@@ -30,14 +30,19 @@
+         <activity
+             android:name=".RegisterActivity"
+             android:exported="false" />
++        <activity android:name=".CategoryActivity"/>
+ 
+         <activity android:name=".SubActivity"/>
++
+         <activity android:name=".CommunityActivity"/>
+         <activity android:name=".CRecommendActivity"/>
+         <activity android:name=".CTipsActivity"/>
+         <activity android:name=".CReviewsActivity"/>
+-        <activity android:name=".WriteActivity"/>
+-        <activity android:name=".CategoryActivity"/>
++
++        <activity android:name=".TipWriteActivity"/>
++        <activity android:name=".ReviewWriteActivity"/>
++        <activity android:name=".RecommendWriteActivity"/>
++
+ 
+ 
+ 
+Index: app/src/main/res/layout/community_reviews.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\">\r\n    <TextView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:textSize=\"30dp\"\r\n        android:gravity=\"center\"\r\n        android:text=\"Food Reviews\"/>\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:orientation=\"vertical\"\r\n        android:gravity=\"right|bottom\">\r\n\r\n        <Button\r\n            android:id=\"@+id/btnWrite\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_gravity=\"right\"\r\n            android:layout_marginBottom=\"60dp\"\r\n            android:text=\"Write\">\r\n\r\n        </Button>\r\n\r\n\r\n    </LinearLayout>\r\n\r\n    <Button\r\n        android:layout_alignParentBottom=\"true\"\r\n        android:id=\"@+id/btnCommunity\"\r\n        android:layout_width=\"130dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"COMMUNITY\" />\r\n    <Button\r\n        android:layout_alignParentBottom=\"true\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:id=\"@+id/btnHome\"\r\n        android:layout_width=\"130dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"HOME\" />\r\n    <Button\r\n        android:layout_alignParentBottom=\"true\"\r\n        android:layout_alignParentRight=\"true\"\r\n        android:id=\"@+id/btnMyPage\"\r\n        android:layout_width=\"130dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"MYPAGE\" />\r\n</RelativeLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/community_reviews.xml b/app/src/main/res/layout/community_reviews.xml
+--- a/app/src/main/res/layout/community_reviews.xml	
++++ b/app/src/main/res/layout/community_reviews.xml	
+@@ -17,7 +17,7 @@
+         android:gravity="right|bottom">
+ 
+         <Button
+-            android:id="@+id/btnWrite"
++            android:id="@+id/btnReviewWrite"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="right"
+Index: app/src/main/res/layout/community_recommend.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\">\r\n    <TextView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:textSize=\"30dp\"\r\n        android:gravity=\"center\"\r\n        android:text=\"Good Place\"/>\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:orientation=\"vertical\"\r\n        android:gravity=\"right|bottom\">\r\n\r\n        <Button\r\n            android:id=\"@+id/btnWrite\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_gravity=\"right\"\r\n            android:layout_marginBottom=\"60dp\"\r\n            android:text=\"Write\">\r\n\r\n        </Button>\r\n\r\n\r\n    </LinearLayout>\r\n\r\n    <Button\r\n        android:layout_alignParentBottom=\"true\"\r\n        android:id=\"@+id/btnCommunity\"\r\n        android:layout_width=\"130dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"COMMUNITY\" />\r\n    <Button\r\n        android:layout_alignParentBottom=\"true\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:id=\"@+id/btnHome\"\r\n        android:layout_width=\"130dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"HOME\" />\r\n    <Button\r\n        android:layout_alignParentBottom=\"true\"\r\n        android:layout_alignParentRight=\"true\"\r\n        android:id=\"@+id/btnMyPage\"\r\n        android:layout_width=\"130dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"MYPAGE\" />\r\n</RelativeLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/community_recommend.xml b/app/src/main/res/layout/community_recommend.xml
+--- a/app/src/main/res/layout/community_recommend.xml	
++++ b/app/src/main/res/layout/community_recommend.xml	
+@@ -17,7 +17,7 @@
+         android:gravity="right|bottom">
+ 
+         <Button
+-            android:id="@+id/btnWrite"
++            android:id="@+id/btnRecommendWrite"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="right"
+Index: app/src/main/java/com/example/ips/CRecommendActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.ips;\r\n\r\nimport android.annotation.SuppressLint;\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\n\r\nimport androidx.annotation.Nullable;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\npublic class CRecommendActivity extends AppCompatActivity {\r\n\r\n    Button btnCommunity, btnHome, btnMypage, btnWrite;\r\n\r\n    @SuppressLint(\"MissingInflatedId\")\r\n    @Override\r\n    protected void onCreate(@Nullable Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.community_recommend);\r\n\r\n\r\n        setTitle(\"메뉴판-음식추천앱\");\r\n\r\n        // 버튼변수에 버튼객체 대입\r\n        btnCommunity = (Button) findViewById(R.id.btnCommunity);\r\n        btnHome = (Button) findViewById(R.id.btnHome);\r\n        btnMypage = (Button) findViewById(R.id.btnMyPage);\r\n        btnWrite = (Button) findViewById(R.id.btnWrite);\r\n\r\n        // 커뮤니티 화면\r\n        btnCommunity.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent = new Intent(getApplicationContext(),CommunityActivity.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n        // 홈화면\r\n        btnHome.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent = new Intent(getApplicationContext(),MainActivity.class);\r\n                startActivity(intent);\r\n\r\n            }\r\n        });\r\n        // 마이페이지 연결\r\n        btnMypage.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent = new Intent(getApplicationContext(),SubActivity.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n        // 글쓰기 버튼\r\n        btnWrite.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent = new Intent(getApplicationContext(),WriteActivity.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/ips/CRecommendActivity.java b/app/src/main/java/com/example/ips/CRecommendActivity.java
+--- a/app/src/main/java/com/example/ips/CRecommendActivity.java	
++++ b/app/src/main/java/com/example/ips/CRecommendActivity.java	
+@@ -11,7 +11,7 @@
+ 
+ public class CRecommendActivity extends AppCompatActivity {
+ 
+-    Button btnCommunity, btnHome, btnMypage, btnWrite;
++    Button btnCommunity, btnHome, btnMypage, btnRecommendWrite;
+ 
+     @SuppressLint("MissingInflatedId")
+     @Override
+@@ -26,7 +26,7 @@
+         btnCommunity = (Button) findViewById(R.id.btnCommunity);
+         btnHome = (Button) findViewById(R.id.btnHome);
+         btnMypage = (Button) findViewById(R.id.btnMyPage);
+-        btnWrite = (Button) findViewById(R.id.btnWrite);
++        btnRecommendWrite = (Button) findViewById(R.id.btnRecommendWrite);
+ 
+         // 커뮤니티 화면
+         btnCommunity.setOnClickListener(new View.OnClickListener() {
+@@ -54,10 +54,10 @@
+             }
+         });
+         // 글쓰기 버튼
+-        btnWrite.setOnClickListener(new View.OnClickListener() {
++        btnRecommendWrite.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+-                Intent intent = new Intent(getApplicationContext(),WriteActivity.class);
++                Intent intent = new Intent(getApplicationContext(), RecommendWriteActivity.class);
+                 startActivity(intent);
+             }
+         });
+Index: app/src/main/java/com/example/ips/CReviewsActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.ips;\r\n\r\nimport android.annotation.SuppressLint;\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\n\r\nimport androidx.annotation.Nullable;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\npublic class CReviewsActivity extends AppCompatActivity {\r\n\r\n    Button btnCommunity, btnHome, btnMypage, btnWrite;\r\n\r\n    @SuppressLint(\"MissingInflatedId\")\r\n    @Override\r\n    protected void onCreate(@Nullable Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.community_reviews);\r\n\r\n\r\n        setTitle(\"메뉴판-음식추천앱\");\r\n\r\n        // 버튼변수에 버튼객체 대입\r\n        btnCommunity = (Button) findViewById(R.id.btnCommunity);\r\n        btnHome = (Button) findViewById(R.id.btnHome);\r\n        btnMypage = (Button) findViewById(R.id.btnMyPage);\r\n        btnWrite = (Button) findViewById(R.id.btnWrite);\r\n\r\n        // 커뮤니티 화면\r\n        btnCommunity.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent = new Intent(getApplicationContext(),CommunityActivity.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n        // 홈화면\r\n        btnHome.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent = new Intent(getApplicationContext(),MainActivity.class);\r\n                startActivity(intent);\r\n\r\n            }\r\n        });\r\n        // 마이페이지 연결\r\n        btnMypage.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent = new Intent(getApplicationContext(),SubActivity.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n        // 글쓰기 버튼\r\n        btnWrite.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent = new Intent(getApplicationContext(),WriteActivity.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/ips/CReviewsActivity.java b/app/src/main/java/com/example/ips/CReviewsActivity.java
+--- a/app/src/main/java/com/example/ips/CReviewsActivity.java	
++++ b/app/src/main/java/com/example/ips/CReviewsActivity.java	
+@@ -11,7 +11,7 @@
+ 
+ public class CReviewsActivity extends AppCompatActivity {
+ 
+-    Button btnCommunity, btnHome, btnMypage, btnWrite;
++    Button btnCommunity, btnHome, btnMypage, btnReviewWrite;
+ 
+     @SuppressLint("MissingInflatedId")
+     @Override
+@@ -26,7 +26,7 @@
+         btnCommunity = (Button) findViewById(R.id.btnCommunity);
+         btnHome = (Button) findViewById(R.id.btnHome);
+         btnMypage = (Button) findViewById(R.id.btnMyPage);
+-        btnWrite = (Button) findViewById(R.id.btnWrite);
++        btnReviewWrite = (Button) findViewById(R.id.btnReviewWrite);
+ 
+         // 커뮤니티 화면
+         btnCommunity.setOnClickListener(new View.OnClickListener() {
+@@ -54,10 +54,10 @@
+             }
+         });
+         // 글쓰기 버튼
+-        btnWrite.setOnClickListener(new View.OnClickListener() {
++        btnReviewWrite.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+-                Intent intent = new Intent(getApplicationContext(),WriteActivity.class);
++                Intent intent = new Intent(getApplicationContext(), ReviewWriteActivity.class);
+                 startActivity(intent);
+             }
+         });
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <bytecodeTargetLevel target=\"17\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	
++++ b/.idea/compiler.xml	
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="CompilerConfiguration">
+-    <bytecodeTargetLevel target="17" />
++    <bytecodeTargetLevel target="11" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: app/src/main/java/com/example/ips/WriteActivity.java
+===================================================================
+diff --git a/app/src/main/java/com/example/ips/WriteActivity.java b/app/src/main/java/com/example/ips/TipWriteActivity.java
+rename from app/src/main/java/com/example/ips/WriteActivity.java
+rename to app/src/main/java/com/example/ips/TipWriteActivity.java
+--- a/app/src/main/java/com/example/ips/WriteActivity.java	
++++ b/app/src/main/java/com/example/ips/TipWriteActivity.java	
+@@ -1,28 +1,52 @@
+ package com.example.ips;
+ 
+ import android.annotation.SuppressLint;
+-import android.content.Intent;
+ import android.os.Bundle;
+ import android.view.View;
+ import android.widget.Button;
++import android.widget.EditText;
+ 
+-import androidx.annotation.Nullable;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
+-public class WriteActivity extends AppCompatActivity {
++import com.google.firebase.database.DatabaseReference;
++import com.google.firebase.database.FirebaseDatabase;
++
+ 
+-    Button btnPost;
++public class TipWriteActivity extends AppCompatActivity {
++
++    private EditText edtTitle, edtContent;
++    private Button btnPost;
++    private DatabaseReference databaseReference;
+ 
+     @SuppressLint("MissingInflatedId")
+     @Override
+-    protected void onCreate(@Nullable Bundle savedInstanceState) {
++    protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.write_main);
+ 
+-        setTitle("메뉴판-음식추천앱");
++        // Firebase 데이터베이스의 "posts" 경로에 대한 참조를 가져옴
++        databaseReference = FirebaseDatabase.getInstance().getReference("posts");
+ 
+-        btnPost = (Button) findViewById(R.id.btnPost);
++        edtTitle = findViewById(R.id.edtTitle);
++        edtContent = findViewById(R.id.edtContents);
++        btnPost = findViewById(R.id.btnPost);
+ 
++        btnPost.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                // 제목과 내용
++                String title = edtTitle.getText().toString().trim();
++                String content = edtContent.getText().toString().trim();
+ 
+-    }
+-}
++                // 데이터베이스에 새로운 데이터를 업로드
++                String postId = databaseReference.push().getKey();
++                Post post = new Post(postId, title, content);
++                databaseReference.child(postId).setValue(post);
++
++                // 업로드 후 입력 필드를 초기화
++                edtTitle.setText("");
++                edtContent.setText("");
++            }
++        });
++    }
++}
+\ No newline at end of file

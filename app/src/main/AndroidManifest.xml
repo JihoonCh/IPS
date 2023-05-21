@@ -37,8 +37,11 @@
         <activity android:name=".CRecommendActivity"/>
         <activity android:name=".CTipsActivity"/>
         <activity android:name=".CReviewsActivity"/>
-        <activity android:name=".WriteActivity"/>
+        <activity android:name=".TipWriteActivity"/>
+        <activity android:name=".ReviewWriteActivity"/>
+        <activity android:name=".RecommendWriteActivity"/>
         <activity android:name=".CategoryActivity"/>
+
 
 
 
