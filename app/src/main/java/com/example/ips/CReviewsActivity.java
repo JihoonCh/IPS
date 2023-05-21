@@ -57,7 +57,7 @@ public class CReviewsActivity extends AppCompatActivity {
         btnWrite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TipWriteActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ReviewWriteActivity.class);
                 startActivity(intent);
             }
         });

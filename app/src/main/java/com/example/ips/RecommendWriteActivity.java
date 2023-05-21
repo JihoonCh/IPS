@@ -25,7 +25,7 @@ public class RecommendWriteActivity extends AppCompatActivity {
         setContentView(R.layout.write_main);
 
         // Firebase 데이터베이스의 "posts" 경로에 대한 참조를 가져옴
-        databaseReference = FirebaseDatabase.getInstance().getReference("posts");
+        databaseReference = FirebaseDatabase.getInstance().getReference("Recommendposts");
 
         edtTitle = findViewById(R.id.edtTitle);
         edtContent = findViewById(R.id.edtContents);
@@ -40,8 +40,8 @@ public class RecommendWriteActivity extends AppCompatActivity {
 
                 // 데이터베이스에 새로운 데이터를 업로드
                 String postId = databaseReference.push().getKey();
-                Post post = new Post(postId, title, content);
-                databaseReference.child(postId).setValue(post);
+                RecommendPost Recommendpost = new RecommendPost(postId, title, content);
+                databaseReference.child(postId).setValue(Recommendpost);
 
                 // 업로드 후 입력 필드를 초기화
                 edtTitle.setText("");
