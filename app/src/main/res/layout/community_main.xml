@@ -20,24 +20,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:layout_marginBottom="180dp"
-            android:text="꿀팁란"></Button>
+            android:layout_marginBottom="170dp"
+            android:text="Tips/Etiquette"></Button>
 
         <Button
             android:id="@+id/btnReviews"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:layout_marginBottom="170dp"
-            android:text="후기란"></Button>
+            android:layout_marginBottom="150dp"
+            android:text="Food Reviews"></Button>
 
         <Button
             android:id="@+id/btnRes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:layout_marginBottom="160dp"
-            android:text="식당추천"></Button>
+            android:layout_marginBottom="130dp"
+            android:text="Good place"></Button>
 
 
     </LinearLayout>
