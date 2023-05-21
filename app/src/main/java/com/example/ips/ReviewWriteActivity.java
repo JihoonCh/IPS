@@ -1,6 +1,7 @@
 package com.example.ips;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,6 +47,9 @@ public class ReviewWriteActivity extends AppCompatActivity {
                 // 업로드 후 입력 필드를 초기화
                 edtTitle.setText("");
                 edtContent.setText("");
+
+                Intent intent = new Intent(getApplicationContext(), CReviewsActivity.class);
+                startActivity(intent);
             }
         });
     }

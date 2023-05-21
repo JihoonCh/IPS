@@ -24,8 +24,6 @@
             android:text="Write">
 
         </Button>
-
-
     </LinearLayout>
 
     <Button
