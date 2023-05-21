@@ -9,19 +9,19 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="제목" />
+        android:hint="Title" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="내용"
+        android:hint="main"
         android:lines="15" />
 
     <Button
         android:id="@+id/btnPost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="확인" />
+        android:text="Finish" />
 
 
 </LinearLayout>
