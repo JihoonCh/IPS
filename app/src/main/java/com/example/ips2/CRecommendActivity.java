@@ -1,4 +1,4 @@
-package com.example.ips;
+package com.example.ips2;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CReviewsActivity extends AppCompatActivity {
+public class CRecommendActivity extends AppCompatActivity {
 
     Button btnCommunity, btnHome, btnMypage, btnWrite;
 
@@ -17,7 +17,7 @@ public class CReviewsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.community_reviews);
+        setContentView(R.layout.community_recommend);
 
 
         setTitle("메뉴판-음식추천앱");
@@ -57,7 +57,7 @@ public class CReviewsActivity extends AppCompatActivity {
         btnWrite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ReviewWriteActivity.class);
+                Intent intent = new Intent(getApplicationContext(), RecommendWriteActivity.class);
                 startActivity(intent);
             }
         });

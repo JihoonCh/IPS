@@ -1,4 +1,4 @@
-package com.example.ips;
+package com.example.ips2;
 
 /* 사용자 계정 정보 모델 클래스*/
 

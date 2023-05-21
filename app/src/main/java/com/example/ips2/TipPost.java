@@ -1,11 +1,11 @@
-package com.example.ips;
+package com.example.ips2;
 
-public class RecommendPost {
+public class TipPost {
     private String postId;
     private String title;
     private String content;
 
-    public RecommendPost(String postId, String title, String content) {
+    public TipPost(String postId, String title, String content) {
         this.postId = postId;
         this.title = title;
         this.content = content;

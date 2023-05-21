@@ -1,4 +1,4 @@
-package com.example.ips;
+package com.example.ips2;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

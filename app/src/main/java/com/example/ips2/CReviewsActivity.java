@@ -1,4 +1,4 @@
-package com.example.ips;
+package com.example.ips2;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -9,15 +9,15 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CTipsActivity extends AppCompatActivity {
+public class CReviewsActivity extends AppCompatActivity {
 
-    Button btnCommunity, btnHome, btnMypage, btnTipWrite;
+    Button btnCommunity, btnHome, btnMypage, btnWrite;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.community_tips);
+        setContentView(R.layout.community_reviews);
 
 
         setTitle("메뉴판-음식추천앱");
@@ -26,7 +26,7 @@ public class CTipsActivity extends AppCompatActivity {
         btnCommunity = (Button) findViewById(R.id.btnCommunity);
         btnHome = (Button) findViewById(R.id.btnHome);
         btnMypage = (Button) findViewById(R.id.btnMyPage);
-        btnTipWrite = (Button) findViewById(R.id.btnTipWrite);
+        btnWrite = (Button) findViewById(R.id.btnWrite);
 
         // 커뮤니티 화면
         btnCommunity.setOnClickListener(new View.OnClickListener() {
@@ -54,10 +54,10 @@ public class CTipsActivity extends AppCompatActivity {
             }
         });
         // 글쓰기 버튼
-        btnTipWrite.setOnClickListener(new View.OnClickListener() {
+        btnWrite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TipWriteActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ReviewWriteActivity.class);
                 startActivity(intent);
             }
         });

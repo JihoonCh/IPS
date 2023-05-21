@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.ips'
+    namespace 'com.example.ips2'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.ips"
+        applicationId "com.example.ips2"
         minSdk 21
         targetSdk 33
         versionCode 1

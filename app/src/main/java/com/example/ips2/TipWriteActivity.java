@@ -1,4 +1,4 @@
-package com.example.ips;
+package com.example.ips2;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -13,7 +13,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 
-public class ReviewWriteActivity extends AppCompatActivity {
+public class TipWriteActivity extends AppCompatActivity {
 
     private EditText edtTitle, edtContent;
     private Button btnPost;
@@ -26,7 +26,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
         setContentView(R.layout.write_main);
 
         // Firebase 데이터베이스의 "posts" 경로에 대한 참조를 가져옴
-        databaseReference = FirebaseDatabase.getInstance().getReference("Reviewposts");
+        databaseReference = FirebaseDatabase.getInstance().getReference("Tipposts");
 
         edtTitle = findViewById(R.id.edtTitle);
         edtContent = findViewById(R.id.edtContents);
@@ -41,14 +41,14 @@ public class ReviewWriteActivity extends AppCompatActivity {
 
                 // 데이터베이스에 새로운 데이터를 업로드
                 String postId = databaseReference.push().getKey();
-                ReviewPost Reviewpost = new ReviewPost(postId, title, content);
-                databaseReference.child(postId).setValue(Reviewpost);
+                TipPost Tippost = new TipPost(postId, title, content);
+                databaseReference.child(postId).setValue(Tippost);
 
                 // 업로드 후 입력 필드를 초기화
                 edtTitle.setText("");
                 edtContent.setText("");
 
-                Intent intent = new Intent(getApplicationContext(), CReviewsActivity.class);
+                Intent intent = new Intent(getApplicationContext(), CTipsActivity.class);
                 startActivity(intent);
             }
         });

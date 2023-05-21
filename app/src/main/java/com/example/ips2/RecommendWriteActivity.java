@@ -1,4 +1,4 @@
-package com.example.ips;
+package com.example.ips2;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;

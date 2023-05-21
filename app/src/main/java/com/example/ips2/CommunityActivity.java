@@ -1,4 +1,4 @@
-package com.example.ips;
+package com.example.ips2;
 
 import android.content.Intent;
 import android.os.Bundle;
