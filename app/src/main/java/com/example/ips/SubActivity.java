@@ -13,19 +13,27 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SubActivity extends AppCompatActivity {
 
     Button btnCommunity, btnHome, btnMypage;
+    Button btnLogout;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage_main);
-
         setTitle("메뉴판-음식추천앱");
-
         // 버튼변수에 버튼객체 대입
+        btnLogout=(Button)findViewById(R.id.btnLogout);
         btnCommunity = (Button) findViewById(R.id.btnCommunity);
         btnHome = (Button) findViewById(R.id.btnHome);
         btnMypage = (Button) findViewById(R.id.btnMyPage);
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // 커뮤니티 화면
         btnCommunity.setOnClickListener(new View.OnClickListener() {

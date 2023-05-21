@@ -7,7 +7,7 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:gravity="center"
-        android:text="커뮤니티"/>
+        android:text="Community"/>
 
     <LinearLayout
         android:layout_width="match_parent"

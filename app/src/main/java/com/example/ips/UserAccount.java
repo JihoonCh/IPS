@@ -5,6 +5,7 @@ package com.example.ips;
 public class UserAccount {
     private String emailId; //이메일 아이디
     private String password;    //비밀번호
+    private String Idname;
     private String idToken; //Firebase Uid (고유 토큰정보)
 
     public UserAccount() { } //빈 생성자 있어야 오류 안남
@@ -32,4 +33,5 @@ public class UserAccount {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

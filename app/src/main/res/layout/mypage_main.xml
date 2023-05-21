@@ -12,7 +12,7 @@
             android:layout_height="wrap_content"
             android:textSize="30dp"
             android:gravity="center"
-            android:text="[00님의 마이페이지]"/>
+            android:text="My Page"/>
 
 
         <Button
@@ -20,21 +20,21 @@
             android:padding="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="내가 쓴 글 보기">
+            android:text="My Articles">
         </Button>
         <Button
             android:id="@+id/btnScrap"
             android:padding="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="스크랩한 글 보기">
+            android:text="Scrapped Articles">
         </Button>
         <Button
             android:id="@+id/btnBookmark"
             android:padding="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="즐겨찾기 한 식당">
+            android:text="My Favorites">
         </Button>
 
         <Button
@@ -42,7 +42,7 @@
             android:padding="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="로그아웃하기">
+            android:text="LogOut">
         </Button>
 
     </LinearLayout>
