@@ -1,52 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:gravity="center"
-        android:text="Good Place"/>
+    android:orientation="vertical"
+    android:layout_margin = "10dp"
+    tools:context=".CRecommendActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="right|bottom">
-
-        <Button
-            android:id="@+id/btnWrite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginBottom="60dp"
-            android:text="Write">
-
-        </Button>
-
-
-    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id = "@+id/rv"
+        android:layout_width ="match_parent"
+        android:layout_height = "match_parent"
+        android:scrollbarSize = "5dp"
+        android:scrollbarFadeDuration ="0"
+        android:scrollbarThumbVertical="@android:color/darker_gray"
+        android:scrollbars = "vertical"
+        android:layout_weight = "1"
+        ></androidx.recyclerview.widget.RecyclerView>
 
     <Button
-        android:layout_alignParentBottom="true"
-        android:id="@+id/btnCommunity"
-        android:layout_width="130dp"
+        android:id="@+id/btnWrite"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="COMMUNITY" />
-    <Button
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/btnHome"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:text="HOME" />
-    <Button
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:id="@+id/btnMyPage"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:text="MYPAGE" />
-</RelativeLayout>
+        android:layout_gravity="right"
+        android:layout_marginBottom="60dp"
+        android:text="Write"></Button>
+
+</LinearLayout>
