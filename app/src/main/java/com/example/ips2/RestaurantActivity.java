@@ -39,6 +39,8 @@ public class RestaurantActivity extends AppCompatActivity {
 
         TextView text_category = findViewById(R.id.foodCategory);
         text_category.setText("Category: " + food_category);
+        TextView text_location = findViewById(R.id.location);
+        text_location.setText("Location: " + location);
 
         //assets에서 "res.json" 파일 읽기
         String jsonString = readJsonFromAssets("res.json");
