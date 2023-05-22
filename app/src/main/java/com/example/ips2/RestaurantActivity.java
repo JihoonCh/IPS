@@ -34,7 +34,8 @@ public class RestaurantActivity extends AppCompatActivity {
 
         Intent intent = getIntent(); //전달할 데이터를 받을 Intent
         String food_category = intent.getStringExtra("Food Category");
-        location = "Songpa-gu";
+        Intent intent2 = getIntent(); //전달할 데이터를 받을 Intent
+        String location = intent2.getStringExtra("User Address");
 
         TextView text_category = findViewById(R.id.foodCategory);
         text_category.setText("Category: " + food_category);

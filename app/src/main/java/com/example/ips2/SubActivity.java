@@ -9,8 +9,6 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.ips.R;
-
 public class SubActivity extends AppCompatActivity {
 
     Button btnCommunity, btnHome, btnMypage;

@@ -9,8 +9,6 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.ips.R;
-
 public class CategoryActivity extends AppCompatActivity implements View.OnClickListener {
     Button btnKorean, btnWestern, btnJapanese, btnChinese, btnCafe, btnBakery;
     Button btnNext, btnHome;
@@ -20,6 +18,9 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
+
+        Intent intent = getIntent(); //전달할 데이터를 받을 Intent
+        String user_address = intent.getStringExtra("User Address");
 
         btnKorean = (Button) findViewById(R.id.korean);
         btnWestern = (Button) findViewById(R.id.western);
@@ -44,6 +45,7 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
             public void onClick(View v) {   //어떤 카테고리 선택했는지 식당액티비티에 전달하며 호출
                 Intent intent = new Intent(CategoryActivity.this, RestaurantActivity.class);
                 intent.putExtra("Food Category", category);
+                intent.putExtra("User Address", user_address);
                 startActivity(intent);
             }
         });

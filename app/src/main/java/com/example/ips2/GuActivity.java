@@ -9,9 +9,7 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.ips.R;
-
-public class GuActivity extends AppCompatActivity  {
+public class GuActivity extends AppCompatActivity implements View.OnClickListener  {
 
     Button btnSeongdong, btnMapo, btnJongno, btnGwanak, btnJungnang, btnGeumcheon;
     Button btnGwangjin, btnNowon, btnJung, btnSeongbuk, btnSeodaemun, btnSeocho;
@@ -20,7 +18,7 @@ public class GuActivity extends AppCompatActivity  {
 
     Button btnNext, btnHome;
     String address;
-    Button lastClickedButton = null;
+    Button lastClickedButton;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
