@@ -1,4 +1,5 @@
-/*package com.example.ips2;
+/*
+package com.example.ips2;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,4 +19,5 @@ public class SplashActivity extends AppCompatActivity {
         }, 3000);
 
     }
-}*/
+}
+*/
