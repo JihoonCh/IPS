@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class CategoryActivity extends AppCompatActivity implements View.OnClickListener {
     Button btnKorean, btnWestern, btnJapanese, btnChinese, btnCafe, btnBakery;
-    Button btnNext, btnHome;
+    Button btnNext, btnHome, btnBack;
     Button lastClickedButton;
     String category;
 
@@ -31,6 +31,7 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
 
         btnNext = (Button) findViewById(R.id.next_fromEat);
         btnHome = (Button) findViewById(R.id.home_fromEat);
+        btnBack = (Button) findViewById(R.id.back_fromEat);
 
         btnKorean.setOnClickListener(this);
         btnWestern.setOnClickListener(this);
@@ -39,7 +40,6 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
         btnCafe.setOnClickListener(this);
         btnBakery.setOnClickListener(this);
 
-        btnNext = findViewById(R.id.next_fromEat);
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {   //어떤 카테고리 선택했는지 식당액티비티에 전달하며 호출
@@ -54,6 +54,15 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CategoryActivity.this,MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CategoryActivity.this, GuActivity.class);
                 startActivity(intent);
                 finish();
             }

@@ -91,6 +91,7 @@ public class GuActivity extends AppCompatActivity implements View.OnClickListene
                 Intent intent = new Intent(GuActivity.this, CategoryActivity.class);
                 intent.putExtra("User Address", address);
                 startActivity(intent);
+                finish();
             }
         });
 
