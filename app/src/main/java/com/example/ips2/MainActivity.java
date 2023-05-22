@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btnKeyWord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+                Intent intent = new Intent(MainActivity.this, GuActivity.class);
                 startActivity(intent);
             }
         });

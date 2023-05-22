@@ -41,6 +41,7 @@
         <activity android:name=".ReviewWriteActivity"/>
         <activity android:name=".RecommendWriteActivity"/>
         <activity android:name=".CategoryActivity"/>
+        <activity android:name=".RestaurantActivity"/>
 
 
 

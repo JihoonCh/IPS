@@ -39,10 +39,10 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
         btnNext = findViewById(R.id.next_fromEat);
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                //Intent intent = new Intent(CategoryActivity.this, AddressActivity.class);
-                //intent.putExtra("Food Category", category);
-                //startActivity(intent);
+            public void onClick(View v) {   //어떤 카테고리 선택했는지 식당액티비티에 전달하며 호출
+                Intent intent = new Intent(CategoryActivity.this, RestaurantActivity.class);
+                intent.putExtra("Food Category", category);
+                startActivity(intent);
             }
         });
 
@@ -56,6 +56,7 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
         });
     }
 
+    //클릭한 버튼 색상 변경 효과
     public void onClick(View v) {
         Button clickedButton = (Button) v;
         if (lastClickedButton != null) {
