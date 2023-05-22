@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.ips.R;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btnHome, btnMypage;
@@ -26,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
         btnMypage = (Button) findViewById(R.id.btnMyPage);
         btnKeyWord = (ImageButton) findViewById(R.id.btnKeyWord);
 
-        // 음식 카테고리 화면
+        // 사용자 위치 화면
         btnKeyWord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+                Intent intent = new Intent(MainActivity.this, GuActivity.class);
                 startActivity(intent);
             }
         });
