@@ -9,55 +9,55 @@
 
     <Button
         android:id="@+id/gangdong"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="11dp"
+        android:layout_width="120dp"
+        android:layout_height="43dp"
         android:text="Gangdong-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintVertical_bias="0.222" />
 
     <Button
         android:id="@+id/eunpyeong"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="11dp"
+        android:layout_width="127dp"
+        android:layout_height="38dp"
         android:text="Eunpyeong-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.082"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintVertical_bias="0.224" />
 
     <Button
         android:id="@+id/gangbuk"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="11dp"
+        android:layout_width="98dp"
+        android:layout_height="43dp"
         android:text="Gangbuk-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.225" />
 
     <Button
         android:id="@+id/gangnam"
-        android:layout_width="wrap_content"
+        android:layout_width="127dp"
         android:layout_height="40dp"
         android:text="Gangnam-gu"
         android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.322" />
+        app:layout_constraintVertical_bias="0.321" />
 
     <Button
         android:id="@+id/seocho"
@@ -74,81 +74,81 @@
 
     <Button
         android:id="@+id/geumcheon"
-        android:layout_width="wrap_content"
+        android:layout_width="127dp"
         android:layout_height="40dp"
-        android:textSize="11dp"
         android:text="Geumcheon-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.414" />
+        app:layout_constraintVertical_bias="0.413" />
 
     <Button
         android:id="@+id/jongno"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="11dp"
+        android:layout_width="129dp"
+        android:layout_height="43dp"
         android:text="Jongno-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.51" />
 
     <Button
         android:id="@+id/seongdong"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="11dp"
+        android:layout_width="122dp"
+        android:layout_height="47dp"
         android:text="Seongdong-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.971"
+        app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.603" />
 
     <Button
         android:id="@+id/yongsan"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="11dp"
+        android:layout_width="167dp"
+        android:layout_height="42dp"
         android:text="Yongsan-gu "
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.965"
+        app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.869" />
 
     <Button
         android:id="@+id/songpa"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="11dp"
+        android:layout_width="159dp"
+        android:layout_height="41dp"
         android:text="Songpa-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.786" />
+        app:layout_constraintVertical_bias="0.787" />
 
     <Button
         android:id="@+id/gwangjin"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="11dp"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
         android:text="Gwangjin-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.971"
+        app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.414" />
+        app:layout_constraintVertical_bias="0.413" />
 
     <Button
         android:id="@+id/nowon"
@@ -165,117 +165,117 @@
 
     <Button
         android:id="@+id/jung"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="11dp"
+        android:layout_width="94dp"
+        android:layout_height="44dp"
         android:text="Jung-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.51" />
+        app:layout_constraintVertical_bias="0.512" />
 
     <Button
         android:id="@+id/yangcheon"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="11dp"
+        android:layout_width="205dp"
+        android:layout_height="39dp"
         android:text="Yangcheon-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.959"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.786" />
+        app:layout_constraintVertical_bias="0.787" />
 
     <Button
         android:id="@+id/yeongdeungpo"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="197dp"
+        android:layout_height="41dp"
         android:text="Yeongdeungpo-gu"
         android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.869" />
 
     <Button
         android:id="@+id/mapo"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="11dp"
+        android:layout_width="127dp"
+        android:layout_height="47dp"
         android:text="Mapo-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.603" />
 
     <Button
         android:id="@+id/guro"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="11dp"
+        android:layout_width="121dp"
+        android:layout_height="45dp"
         android:text="Guro-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.323" />
+        app:layout_constraintVertical_bias="0.321" />
 
     <Button
         android:id="@+id/seongbuk"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="11dp"
+        android:layout_width="119dp"
+        android:layout_height="41dp"
         android:text="Seongbuk-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.698" />
 
     <Button
         android:id="@+id/seodaemun"
-        android:layout_width="wrap_content"
+        android:layout_width="127dp"
         android:layout_height="40dp"
-        android:textSize="11dp"
         android:text="Seodaemun-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.698" />
 
     <Button
         android:id="@+id/gwanak"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="11dp"
+        android:layout_width="96dp"
+        android:layout_height="45dp"
         android:text="Gwanak-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.414" />
+        app:layout_constraintVertical_bias="0.416" />
 
     <Button
         android:id="@+id/jungnang"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="11dp"
+        android:layout_width="120dp"
+        android:layout_height="42dp"
         android:text="Jungnang-gu"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.51" />
@@ -295,38 +295,39 @@
 
     <Button
         android:id="@+id/dobong"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="101dp"
+        android:layout_height="41dp"
         android:text="Dobong-gu"
         android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.137" />
+        app:layout_constraintVertical_bias="0.136" />
 
     <Button
         android:id="@+id/dongdaemun"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="127dp"
+        android:layout_height="41dp"
         android:text="Dongdaemun-gu"
         android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.137" />
 
     <Button
         android:id="@+id/dongjak"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="119dp"
+        android:layout_height="41dp"
         android:text="Dongjak-gu"
         android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintHorizontal_bias="0.952"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.137" />
