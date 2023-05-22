@@ -9,7 +9,7 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class GuActivity extends AppCompatActivity implements View.OnClickListener  {
+public class GuActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnSeongdong, btnMapo, btnJongno, btnGwanak, btnJungnang, btnGeumcheon;
     Button btnGwangjin, btnNowon, btnJung, btnSeongbuk, btnSeodaemun, btnSeocho;
@@ -18,7 +18,7 @@ public class GuActivity extends AppCompatActivity implements View.OnClickListene
 
     Button btnNext, btnHome;
     String address;
-    Button lastClickedButton;
+    Button lastClickedButton = null;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +52,35 @@ public class GuActivity extends AppCompatActivity implements View.OnClickListene
         btnGangseo = (Button) findViewById(R.id.gangseo);
         btnDongjak = (Button) findViewById(R.id.dongjak);
         btnDongdaemun = (Button) findViewById(R.id.dongdaemun);
+
+        btnSeongdong.setOnClickListener(this);
+        btnMapo.setOnClickListener(this);
+        btnJongno.setOnClickListener(this);
+        btnGwanak.setOnClickListener(this);
+        btnJungnang.setOnClickListener(this);
+        btnGeumcheon.setOnClickListener(this);
+
+        btnGwangjin.setOnClickListener(this);
+        btnNowon.setOnClickListener(this);
+        btnJung.setOnClickListener(this);
+        btnSeongbuk.setOnClickListener(this);
+        btnSeodaemun.setOnClickListener(this);
+        btnSeocho.setOnClickListener(this);
+
+        btnYangcheon.setOnClickListener(this);
+        btnYeongdeungpo.setOnClickListener(this);
+        btnYongsan.setOnClickListener(this);
+        btnSongpa.setOnClickListener(this);
+        btnDobong.setOnClickListener(this);
+        btnGangdong.setOnClickListener(this);
+
+        btnEunpyeong.setOnClickListener(this);
+        btnGangbuk.setOnClickListener(this);
+        btnGuro.setOnClickListener(this);
+        btnGangnam.setOnClickListener(this);
+        btnGangseo.setOnClickListener(this);
+        btnDongjak.setOnClickListener(this);
+        btnDongdaemun.setOnClickListener(this);
 
         btnNext = (Button) findViewById(R.id.go_next);
         btnHome = (Button) findViewById(R.id.go_home);
