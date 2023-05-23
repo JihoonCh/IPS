@@ -3,8 +3,10 @@ package com.example.ips2;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -88,6 +90,12 @@ public class GuActivity extends AppCompatActivity implements View.OnClickListene
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (TextUtils.isEmpty(address)) {
+                    //구를 선택하지 않았을 때
+                    Toast.makeText(GuActivity.this,
+                            "Please select your location", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Intent intent = new Intent(GuActivity.this, CategoryActivity.class);
                 intent.putExtra("User Address", address);
                 startActivity(intent);

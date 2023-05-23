@@ -47,7 +47,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                 if (TextUtils.isEmpty(strEmail) || TextUtils.isEmpty(strPwd)) {
                     //이메일 또는 비밀번호가 비어 있을 때
-                    Toast.makeText(RegisterActivity.this, "\n" +
+                    Toast.makeText(RegisterActivity.this,
                             "Please enter your email and password", Toast.LENGTH_SHORT).show();
                     return;
                 }
