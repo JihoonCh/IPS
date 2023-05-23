@@ -13,13 +13,13 @@
         android:layout_centerHorizontal="true">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
+            android:padding="30dp"
             android:text="What to eat?"
-            android:textSize="30dp"
             android:textColor="@color/black"
-            android:padding="30dp"></TextView>
+            android:textSize="30dp"></TextView>
 
         <ImageButton
             android:id="@+id/btnKeyWord"

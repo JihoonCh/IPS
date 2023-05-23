@@ -38,7 +38,20 @@ public class CRecommendActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         list_rec = new ArrayList<>();
-        adapter_recommend = new Adapter_Recommend(this,list_rec);
+        adapter_recommend = new Adapter_Recommend(this, list_rec, new Adapter_Recommend.OnItemClickListener() {
+            @Override
+            public void onItemClick(RecommendPost recommendPost) {
+                String title = recommendPost.getTitle();
+                String content = recommendPost.getContent();
+
+                // 새로운 액티비티로 title과 content 전달
+                Intent intent = new Intent(CRecommendActivity.this, OpenPostActivity.class);
+                intent.putExtra("title", title);
+                intent.putExtra("content", content);
+                startActivity(intent);
+            }
+        });
+
         recyclerView.setAdapter(adapter_recommend);
 
         database.addValueEventListener(new ValueEventListener() {

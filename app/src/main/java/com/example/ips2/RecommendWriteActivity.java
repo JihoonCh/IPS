@@ -50,9 +50,6 @@ public class RecommendWriteActivity extends AppCompatActivity {
 
                 // 데이터를 전달할 Intent 생성
                 Intent intent = new Intent(RecommendWriteActivity.this, CRecommendActivity.class);
-                intent.putExtra("title", title);
-                intent.putExtra("content", content);
-
                 startActivity(intent);
             }
         });

@@ -38,7 +38,19 @@ public class CTipsActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         list_tip = new ArrayList<>();
-        adapter_tips = new Adapter_Tips(this,list_tip);
+        adapter_tips = new Adapter_Tips(this,list_tip, new Adapter_Tips.OnItemClickListener() {
+            @Override
+            public void onItemClick(TipPost tipPost) {
+                String title = tipPost.getTitle();
+                String content = tipPost.getContent();
+
+                // 새로운 액티비티로 title과 content 전달
+                Intent intent = new Intent(CTipsActivity.this, OpenPostActivity.class);
+                intent.putExtra("title", title);
+                intent.putExtra("content", content);
+                startActivity(intent);
+            }
+        });
         recyclerView.setAdapter(adapter_tips);
 
         database.addValueEventListener(new ValueEventListener() {

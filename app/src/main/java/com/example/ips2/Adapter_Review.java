@@ -17,10 +17,16 @@ public class Adapter_Review extends RecyclerView.Adapter<Adapter_Review.MyViewHo
 
     ArrayList<ReviewPost> list_rev;
 
+    // 인터페이스 정의
+    public interface OnItemClickListener {
+        void onItemClick(ReviewPost reviewPost);
+    }
 
-    public Adapter_Review(Context contect_rev, ArrayList<ReviewPost> list_rev) {
+    private OnItemClickListener listener;
+    public Adapter_Review(Context contect_rev, ArrayList<ReviewPost> list_rev, Adapter_Review.OnItemClickListener listener) {
         this.contect_rev = contect_rev;
         this.list_rev = list_rev;
+        this.listener = listener;
     }
 
     @NonNull
@@ -36,6 +42,15 @@ public class Adapter_Review extends RecyclerView.Adapter<Adapter_Review.MyViewHo
         ReviewPost reviewpost = list_rev.get(position);
         holder.title.setText(reviewpost.getTitle());
         holder.content.setText(reviewpost.getContent());
+        // 아이템 클릭 이벤트 처리
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onItemClick(reviewpost);
+                }
+            }
+        });
 
     }
 

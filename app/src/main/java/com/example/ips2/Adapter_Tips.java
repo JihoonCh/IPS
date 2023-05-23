@@ -17,10 +17,17 @@ public class Adapter_Tips extends RecyclerView.Adapter<Adapter_Tips.MyViewHolder
 
     ArrayList<TipPost> list_tip;
 
+    // 인터페이스 정의
+    public interface OnItemClickListener {
+        void onItemClick(TipPost tipPost);
+    }
 
-    public Adapter_Tips(Context context_tip, ArrayList<TipPost> list_tip) {
+    private OnItemClickListener listener;
+
+    public Adapter_Tips(Context context_tip, ArrayList<TipPost> list_tip, Adapter_Tips.OnItemClickListener listener) {
         this.context_tip = context_tip;
         this.list_tip = list_tip;
+        this.listener = listener;
     }
 
     @NonNull
@@ -32,11 +39,18 @@ public class Adapter_Tips extends RecyclerView.Adapter<Adapter_Tips.MyViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
         TipPost tippost = list_tip.get(position);
         holder.title.setText(tippost.getTitle());
         holder.content.setText(tippost.getContent());
-
+        // 아이템 클릭 이벤트 처리
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onItemClick(tippost);
+                }
+            }
+        });
     }
 
     @Override

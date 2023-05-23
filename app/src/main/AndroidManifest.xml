@@ -47,6 +47,7 @@
         <activity android:name=".FavoriteActivity"/>
         <activity android:name=".SplashActivity"/>
         <activity android:name=".FavoriteMenuActivity"/>
+        <activity android:name=".OpenPostActivity"/>
 
 
     </application>

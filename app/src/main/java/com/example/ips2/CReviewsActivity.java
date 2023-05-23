@@ -38,7 +38,19 @@ public class CReviewsActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         list_rev = new ArrayList<>();
-        adapter_review = new Adapter_Review(this,list_rev);
+        adapter_review = new Adapter_Review(this,list_rev, new Adapter_Review.OnItemClickListener() {
+            @Override
+            public void onItemClick(ReviewPost reviewPost) {
+                String title = reviewPost.getTitle();
+                String content = reviewPost.getContent();
+
+                // 새로운 액티비티로 title과 content 전달
+                Intent intent = new Intent(CReviewsActivity.this, OpenPostActivity.class);
+                intent.putExtra("title", title);
+                intent.putExtra("content", content);
+                startActivity(intent);
+            }
+        });
         recyclerView.setAdapter(adapter_review);
 
         database.addValueEventListener(new ValueEventListener() {
