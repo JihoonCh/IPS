@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@color/orange1">
 
     <EditText
         android:id="@+id/et_email"
@@ -41,6 +42,7 @@
         android:layout_margin="8dp"
         android:layout_marginBottom="8dp"
         android:text="SIGN IN"
+        android:background="@color/pink"
         android:fontFamily="@font/sun_b"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_register"
@@ -54,6 +56,7 @@
         android:layout_margin="8dp"
         android:layout_marginBottom="8dp"
         android:text="REGISTER"
+        android:background="@color/pink"
         android:fontFamily="@font/sun_b"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

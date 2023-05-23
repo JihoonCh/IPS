@@ -1,0 +1,92 @@
+Index: app/src/main/java/com/example/ips2/CategoryActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.ips2;\r\n\r\nimport android.content.Intent;\r\nimport android.graphics.Color;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\n\r\nimport androidx.annotation.Nullable;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport com.example.ips.R;\r\n\r\npublic class CategoryActivity extends AppCompatActivity implements View.OnClickListener {\r\n    Button btnKorean, btnWestern, btnJapanese, btnChinese, btnCafe, btnBakery;\r\n    Button btnNext, btnHome;\r\n    Button lastClickedButton;\r\n    String category;\r\n\r\n    protected void onCreate(@Nullable Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_category);\r\n\r\n        btnKorean = (Button) findViewById(R.id.korean);\r\n        btnWestern = (Button) findViewById(R.id.western);\r\n        btnJapanese = (Button) findViewById(R.id.japanese);\r\n        btnChinese = (Button) findViewById(R.id.chinese);\r\n        btnCafe = (Button) findViewById(R.id.cafe);\r\n        btnBakery = (Button) findViewById(R.id.bakery);\r\n\r\n        btnNext = (Button) findViewById(R.id.next_fromEat);\r\n        btnHome = (Button) findViewById(R.id.home_fromEat);\r\n\r\n        btnKorean.setOnClickListener(this);\r\n        btnWestern.setOnClickListener(this);\r\n        btnJapanese.setOnClickListener(this);\r\n        btnChinese.setOnClickListener(this);\r\n        btnCafe.setOnClickListener(this);\r\n        btnBakery.setOnClickListener(this);\r\n\r\n        btnNext = findViewById(R.id.next_fromEat);\r\n        btnNext.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                //Intent intent = new Intent(CategoryActivity.this, AddressActivity.class);\r\n                //intent.putExtra(\"Food Category\", category);\r\n                //startActivity(intent);\r\n            }\r\n        });\r\n\r\n        btnHome.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                Intent intent = new Intent(CategoryActivity.this,MainActivity.class);\r\n                startActivity(intent);\r\n                finish();\r\n            }\r\n        });\r\n    }\r\n\r\n    public void onClick(View v) {\r\n        Button clickedButton = (Button) v;\r\n        if (lastClickedButton != null) {\r\n            lastClickedButton.setBackgroundColor(Color.LTGRAY);\r\n        }\r\n        clickedButton.setBackgroundColor(Color.YELLOW);\r\n        lastClickedButton = clickedButton;\r\n        if (v != btnNext && v != btnHome) category = clickedButton.getText().toString();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/ips2/CategoryActivity.java b/app/src/main/java/com/example/ips2/CategoryActivity.java
+--- a/app/src/main/java/com/example/ips2/CategoryActivity.java	(revision 601a5c66cae5b105ae7bf4c693909c4ee8cedff6)
++++ b/app/src/main/java/com/example/ips2/CategoryActivity.java	(date 1684784392657)
+@@ -9,8 +9,6 @@
+ import androidx.annotation.Nullable;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
+-import com.example.ips.R;
+-
+ public class CategoryActivity extends AppCompatActivity implements View.OnClickListener {
+     Button btnKorean, btnWestern, btnJapanese, btnChinese, btnCafe, btnBakery;
+     Button btnNext, btnHome;
+Index: app/src/main/java/com/example/ips2/SplashActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\r\npackage com.example.ips2;\r\n\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.os.Handler;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\npublic class SplashActivity extends AppCompatActivity {\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_splash);\r\n        new Handler().postDelayed(() -> {\r\n            Intent intent = new Intent(getBaseContext(), LoginActivity.class);\r\n            startActivity(intent);\r\n            finish();\r\n        }, 3000);\r\n\r\n    }\r\n}\r\n*/
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/ips2/SplashActivity.java b/app/src/main/java/com/example/ips2/SplashActivity.java
+--- a/app/src/main/java/com/example/ips2/SplashActivity.java	(revision 601a5c66cae5b105ae7bf4c693909c4ee8cedff6)
++++ b/app/src/main/java/com/example/ips2/SplashActivity.java	(date 1684783071967)
+@@ -1,4 +1,4 @@
+-/*
++
+ package com.example.ips2;
+ 
+ import android.content.Intent;
+@@ -19,5 +19,4 @@
+         }, 3000);
+ 
+     }
+-}
+-*/
+\ No newline at end of file
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/ips2/GuActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.ips2;\r\n\r\nimport android.content.Intent;\r\nimport android.graphics.Color;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\n\r\nimport androidx.annotation.Nullable;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport com.example.ips.R;\r\n\r\npublic class GuActivity extends AppCompatActivity  {\r\n\r\n    Button btnSeongdong, btnMapo, btnJongno, btnGwanak, btnJungnang, btnGeumcheon;\r\n    Button btnGwangjin, btnNowon, btnJung, btnSeongbuk, btnSeodaemun, btnSeocho;\r\n    Button btnYangcheon, btnYeongdeungpo, btnYongsan, btnSongpa, btnDobong, btnGangdong;\r\n    Button btnEunpyeong, btnGangbuk, btnGuro, btnGangnam, btnGangseo, btnDongjak, btnDongdaemun;\r\n\r\n    Button btnNext, btnHome;\r\n    String address;\r\n    Button lastClickedButton = null;\r\n\r\n    protected void onCreate(@Nullable Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_address);\r\n\r\n        btnSeongdong = (Button) findViewById(R.id.seongdong);\r\n        btnMapo = (Button) findViewById(R.id.mapo);\r\n        btnJongno = (Button) findViewById(R.id.jongno);\r\n        btnGwanak = (Button) findViewById(R.id.gwanak);\r\n        btnJungnang = (Button) findViewById(R.id.jungnang);\r\n        btnGeumcheon = (Button) findViewById(R.id.geumcheon);\r\n\r\n        btnGwangjin = (Button) findViewById(R.id.gwangjin);\r\n        btnNowon = (Button) findViewById(R.id.nowon);\r\n        btnJung = (Button) findViewById(R.id.jung);\r\n        btnSeongbuk = (Button) findViewById(R.id.seongbuk);\r\n        btnSeodaemun = (Button) findViewById(R.id.seodaemun);\r\n        btnSeocho = (Button) findViewById(R.id.seocho);\r\n\r\n        btnYangcheon = (Button) findViewById(R.id.yangcheon);\r\n        btnYeongdeungpo = (Button) findViewById(R.id.yeongdeungpo);\r\n        btnYongsan = (Button) findViewById(R.id.yongsan);\r\n        btnSongpa = (Button) findViewById(R.id.songpa);\r\n        btnDobong = (Button) findViewById(R.id.dobong);\r\n        btnGangdong = (Button) findViewById(R.id.gangdong);\r\n\r\n        btnEunpyeong = (Button) findViewById(R.id.eunpyeong);\r\n        btnGangbuk = (Button) findViewById(R.id.gangbuk);\r\n        btnGuro = (Button) findViewById(R.id.guro);\r\n        btnGangnam = (Button) findViewById(R.id.gangnam);\r\n        btnGangseo = (Button) findViewById(R.id.gangseo);\r\n        btnDongjak = (Button) findViewById(R.id.dongjak);\r\n        btnDongdaemun = (Button) findViewById(R.id.dongdaemun);\r\n\r\n        btnNext = (Button) findViewById(R.id.go_next);\r\n        btnHome = (Button) findViewById(R.id.go_home);\r\n\r\n        btnNext.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                Intent intent = new Intent(GuActivity.this, CategoryActivity.class);\r\n                intent.putExtra(\"User Address\", address);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n\r\n        btnHome.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                Intent intent = new Intent(GuActivity.this,MainActivity.class);\r\n                startActivity(intent);\r\n                finish();\r\n            }\r\n        });\r\n    }\r\n\r\n    public void onClick(View v) {\r\n        Button clickedButton = (Button) v;\r\n        if (lastClickedButton != null) {\r\n            lastClickedButton.setBackgroundColor(Color.LTGRAY);\r\n        }\r\n        clickedButton.setBackgroundColor(Color.YELLOW);\r\n        lastClickedButton = clickedButton;\r\n        if (v != btnNext && v != btnHome) address = clickedButton.getText().toString();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/ips2/GuActivity.java b/app/src/main/java/com/example/ips2/GuActivity.java
+--- a/app/src/main/java/com/example/ips2/GuActivity.java	(revision 601a5c66cae5b105ae7bf4c693909c4ee8cedff6)
++++ b/app/src/main/java/com/example/ips2/GuActivity.java	(date 1684783826499)
+@@ -9,8 +9,6 @@
+ import androidx.annotation.Nullable;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
+-import com.example.ips.R;
+-
+ public class GuActivity extends AppCompatActivity  {
+ 
+     Button btnSeongdong, btnMapo, btnJongno, btnGwanak, btnJungnang, btnGeumcheon;
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\">\r\n\r\n    <uses-permission android:name=\"android.permission.INTERNET\"/>\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.IPS\"\r\n        android:enableOnBackInvokedCallback=\"true\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".LoginActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n\r\n        </activity>\r\n\r\n        <activity android:name=\".MainActivity\"\r\n            android:exported=\"false\" />\r\n\r\n        <activity\r\n            android:name=\".RegisterActivity\"\r\n            android:exported=\"false\" />\r\n\r\n        <activity android:name=\".SubActivity\"/>\r\n        <activity android:name=\".CommunityActivity\"/>\r\n        <activity android:name=\".CRecommendActivity\"/>\r\n        <activity android:name=\".CTipsActivity\"/>\r\n        <activity android:name=\".CReviewsActivity\"/>\r\n        <activity android:name=\".TipWriteActivity\"/>\r\n        <activity android:name=\".ReviewWriteActivity\"/>\r\n        <activity android:name=\".RecommendWriteActivity\"/>\r\n        <activity android:name=\".CategoryActivity\"/>\r\n\r\n\r\n\r\n\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision 601a5c66cae5b105ae7bf4c693909c4ee8cedff6)
++++ b/app/src/main/AndroidManifest.xml	(date 1684783071984)
+@@ -16,7 +16,7 @@
+         android:enableOnBackInvokedCallback="true"
+         tools:targetApi="31">
+         <activity
+-            android:name=".LoginActivity"
++            android:name=".SplashActivity"
+             android:exported="true">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+@@ -43,8 +43,6 @@
+         <activity android:name=".CategoryActivity"/>
+ 
+ 
+-
+-
+     </application>
+ 
+ </manifest>
+\ No newline at end of file

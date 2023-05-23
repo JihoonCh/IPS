@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/orange1">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -17,6 +18,7 @@
             android:fontFamily="@font/sun_b"
             android:text="What to eat?"
             android:textSize="30dp"
+            android:textColor="@color/black"
             android:padding="30dp"></TextView>
 
         <ImageButton
@@ -25,7 +27,7 @@
             android:layout_height="250dp"
             android:scaleType="centerCrop"
             android:padding="0sp"
-            android:src="@drawable/keyword"/>
+            android:src="@drawable/bestchoice"/>
     </LinearLayout>
 
     <LinearLayout
@@ -41,6 +43,7 @@
             android:layout_alignParentBottom="true"
             android:fontFamily="@font/sun_b"
             android:layout_weight="1"
+            android:background="@color/pink"
             android:text="COMMUNITY" />
 
         <Button
@@ -50,6 +53,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/sun_b"
+            android:background="@color/pink"
             android:layout_weight="1"
             android:text="HOME" />
 
@@ -60,6 +64,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:fontFamily="@font/sun_b"
+            android:background="@color/pink"
             android:layout_weight="1"
             android:text="MYPAGE" />
 

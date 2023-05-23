@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin = "10dp"
-    tools:context=".CTipsActivity">
+    tools:context=".CTipsActivity"
+    android:background="@color/orange1">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,6 +34,7 @@
         android:layout_gravity="right"
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/sun_b"
+        android:background="@color/pink"
         android:text="Write"></Button>
 
     <LinearLayout
@@ -49,6 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
+            android:background="@color/pink"
             android:text="COMMUNITY" />
         <Button
             android:layout_alignParentBottom="true"
@@ -58,6 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
+            android:background="@color/pink"
             android:text="HOME" />
 
         <Button
@@ -68,6 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
+            android:background="@color/pink"
             android:text="MYPAGE" />
     </LinearLayout>
 

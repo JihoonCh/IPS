@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/orange1">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,7 +23,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
-            android:text="My Articles">
+            android:text="My Articles"
+            android:background="@color/pink">
         </Button>
         <Button
             android:id="@+id/btnScrap"
@@ -30,7 +32,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
-            android:text="Scrapped Articles">
+            android:text="Scrapped Articles"
+            android:background="@color/pink">
         </Button>
         <Button
             android:id="@+id/btnBookmark"
@@ -38,7 +41,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
-            android:text="My Favorites">
+            android:text="My Favorites"
+            android:background="@color/pink">
         </Button>
 
         <Button
@@ -47,7 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
-            android:text="LogOut">
+            android:text="LogOut"
+            android:background="@color/pink">
         </Button>
 
     </LinearLayout>
@@ -65,7 +70,8 @@
             android:layout_alignParentBottom="true"
             android:layout_weight="1"
             android:text="COMMUNITY"
-            android:fontFamily="@font/sun_b"/>
+            android:fontFamily="@font/sun_b"
+            android:background="@color/pink"/>
 
         <Button
             android:id="@+id/btnHome"
@@ -75,7 +81,8 @@
             android:layout_centerHorizontal="true"
             android:layout_weight="1"
             android:text="HOME"
-            android:fontFamily="@font/sun_b"/>
+            android:fontFamily="@font/sun_b"
+            android:background="@color/pink"/>
 
         <Button
             android:id="@+id/btnMyPage"
@@ -85,7 +92,8 @@
             android:layout_alignParentBottom="true"
             android:layout_weight="1"
             android:text="MYPAGE"
-            android:fontFamily="@font/sun_b"/>
+            android:fontFamily="@font/sun_b"
+            android:background="@color/pink"/>
 
     </LinearLayout>
 </RelativeLayout>

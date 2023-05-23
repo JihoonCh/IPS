@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/orange1">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,6 +24,7 @@
             android:layout_gravity="left"
             android:layout_weight="1"
             android:textSize="30dp"
+            android:fontFamily="@font/sun_b"
             android:text="Tips/Etiquette"></Button>
 
         <Button
@@ -32,6 +34,7 @@
             android:layout_gravity="left"
             android:layout_weight="1"
             android:textSize="30dp"
+            android:fontFamily="@font/sun_b"
             android:text="Food Reviews"></Button>
 
         <Button
@@ -41,6 +44,7 @@
             android:layout_gravity="left"
             android:layout_weight="1"
             android:textSize="30dp"
+            android:fontFamily="@font/sun_b"
             android:text="Good place"></Button>
 
     </LinearLayout>
@@ -57,7 +61,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_weight="1"
-            android:text="COMMUNITY" />
+            android:fontFamily="@font/sun_b"
+            android:text="COMMUNITY"
+            android:background="@color/pink"/>
 
         <Button
             android:id="@+id/btnHome"
@@ -66,7 +72,9 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_weight="1"
-            android:text="HOME" />
+            android:fontFamily="@font/sun_b"
+            android:text="HOME"
+            android:background="@color/pink"/>
 
         <Button
             android:id="@+id/btnMyPage"
@@ -74,8 +82,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
+            android:fontFamily="@font/sun_b"
             android:layout_weight="1"
-            android:text="MYPAGE" />
+            android:text="MYPAGE"
+            android:background="@color/pink"/>
 
     </LinearLayout>
 </RelativeLayout>
