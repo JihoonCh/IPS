@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -22,24 +24,30 @@ import java.util.List;
 
 public class RestaurantActivity extends AppCompatActivity {
 
-    private ListView listView;  //식당 리스트 출력할 리스트뷰
+    private ListView restaurantList;  //식당 리스트 출력할 리스트뷰
     private String location;
+    private String selectedResName; // 선택된 식당의 ResName을 저장할 변수
+    private int selectedResID; // 선택된 식당의 ResID를 저장할 변수
+    private String selectedLotAddress; // 선택된 식당의 LotAddress를 저장할 변수
+    private String selectedPhoneNum; // 선택된 식당의 PhoneNum을 저장할 변수
+    private TextView text_category;
+    private TextView text_location;
 
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurant);
 
-        listView = findViewById(R.id.resList);
+        restaurantList = findViewById(R.id.resList);
 
         Intent intent = getIntent(); //전달할 데이터를 받을 Intent
         String food_category = intent.getStringExtra("Food Category");
         Intent intent2 = getIntent(); //전달할 데이터를 받을 Intent
-        String location = intent2.getStringExtra("User Address");
+        location = intent2.getStringExtra("User Address");
 
-        TextView text_category = findViewById(R.id.foodCategory);
+        text_category = findViewById(R.id.foodCategory);
         text_category.setText("Category: " + food_category);
-        TextView text_location = findViewById(R.id.location);
+        text_location = findViewById(R.id.location);
         text_location.setText("Location: " + location);
 
         //assets에서 "res.json" 파일 읽기
@@ -52,13 +60,12 @@ public class RestaurantActivity extends AppCompatActivity {
             // "res.json"의 데이터를 파싱하여 ResType이 "foodcg"와 일치하고 ResID가 10020보다 작고, LotAddress에 location 값이 포함된 경우에만 ResName을 가져와서 리스트에 추가
             int count = 0; // 가져온 데이터 개수를 카운트하기 위한 변수
             for (int i = 0; i < jsonArray.length(); i++) {
-                if (count >= 20) {
-                    break; // 최대 20개까지만 가져오기 위해 반복문 종료
+                if (count >= 30) {
+                    break; // 최대 30개까지만 가져오기 위해 반복문 종료
                 }
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 String resType = jsonObject.getString("ResType");
-                int resID = jsonObject.getInt("ResID");
                 String lotAddress = jsonObject.getString("LotAddress");
 
                 if (resType.equals(food_category) && lotAddress.contains(location)) {
@@ -67,10 +74,37 @@ public class RestaurantActivity extends AppCompatActivity {
                     count++; // 데이터 개수 카운트 증가
                 }
             }
+            //식당이 없는 경우 안내문구 표시
+            if (count == 0) dataList.add("\n\n\n\n\nThere are no restaurants that meet the conditions.\n\n\n\n" +
+                    "Please change the conditions and search again.");
 
             // 리스트뷰에 데이터를 표시하기 위해 ArrayAdapter 사용
             ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dataList);
-            listView.setAdapter(adapter);
+            restaurantList.setAdapter(adapter);
+
+            // 리스트뷰의 아이템 클릭 이벤트 처리
+            restaurantList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    JSONObject jsonObject;
+                    try {
+                        jsonObject = jsonArray.getJSONObject(position);
+                        selectedResName = jsonObject.getString("ResName"); // 선택된 아이템의 ResName 저장
+                        selectedResID = jsonObject.getInt("ResID"); // 선택된 아이템의 ResID 저장
+                        selectedLotAddress = jsonObject.getString("LotAddress"); // 선택된 아이템의 LotAddress 저장
+                        selectedPhoneNum = jsonObject.getString("PhoneNum"); // 선택된 아이템의 PhoneNum 저장
+                        // 이후에 할 작업을 여기에 추가
+                        Intent intent = new Intent(RestaurantActivity.this, MenuActivity.class);
+                        intent.putExtra("Selected ResName", selectedResName);
+                        intent.putExtra("Selected ResID", selectedResID);
+                        intent.putExtra("Selected ResAddress", selectedLotAddress);
+                        intent.putExtra("Selected ResPhoneNum", selectedPhoneNum);
+                        startActivity(intent);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
         } catch (JSONException e) {
             e.printStackTrace();
         }

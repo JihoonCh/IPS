@@ -43,6 +43,7 @@
         <activity android:name=".CategoryActivity"/>
         <activity android:name=".RestaurantActivity"/>
         <activity android:name=".GuActivity"/>
+        <activity android:name=".MenuActivity"/>
 
 
     </application>
