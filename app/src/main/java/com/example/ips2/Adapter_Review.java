@@ -11,37 +11,37 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Adapter_Recommend extends RecyclerView.Adapter<Adapter_Recommend.MyViewHolder> {
+public class Adapter_Review extends RecyclerView.Adapter<Adapter_Review.MyViewHolder> {
 
-    Context context_rec;
+    Context contect_rev;
 
-    ArrayList<RecommendPost> list_rec;
+    ArrayList<ReviewPost> list_rev;
 
 
-    public Adapter_Recommend(Context context_rec, ArrayList<RecommendPost> list_rec) {
-        this.context_rec = context_rec;
-        this.list_rec = list_rec;
+    public Adapter_Review(Context contect_rev, ArrayList<ReviewPost> list_rev) {
+        this.contect_rev = contect_rev;
+        this.list_rev = list_rev;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context_rec).inflate(R.layout.item_recommend,parent,false);
+        View v = LayoutInflater.from(contect_rev).inflate(R.layout.item_review,parent,false);
         return  new MyViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        RecommendPost recommendpost = list_rec.get(position);
-        holder.title.setText(recommendpost.getTitle());
-        holder.content.setText(recommendpost.getContent());
+        ReviewPost reviewpost = list_rev.get(position);
+        holder.title.setText(reviewpost.getTitle());
+        holder.content.setText(reviewpost.getContent());
 
     }
 
     @Override
     public int getItemCount() {
-        return list_rec.size();
+        return list_rev.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{

@@ -11,37 +11,37 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Adapter_Recommend extends RecyclerView.Adapter<Adapter_Recommend.MyViewHolder> {
+public class Adapter_Tips extends RecyclerView.Adapter<Adapter_Tips.MyViewHolder> {
 
-    Context context_rec;
+    Context context_tip;
 
-    ArrayList<RecommendPost> list_rec;
+    ArrayList<TipPost> list_tip;
 
 
-    public Adapter_Recommend(Context context_rec, ArrayList<RecommendPost> list_rec) {
-        this.context_rec = context_rec;
-        this.list_rec = list_rec;
+    public Adapter_Tips(Context context_tip, ArrayList<TipPost> list_tip) {
+        this.context_tip = context_tip;
+        this.list_tip = list_tip;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context_rec).inflate(R.layout.item_recommend,parent,false);
+        View v = LayoutInflater.from(context_tip).inflate(R.layout.item_tips,parent,false);
         return  new MyViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        RecommendPost recommendpost = list_rec.get(position);
-        holder.title.setText(recommendpost.getTitle());
-        holder.content.setText(recommendpost.getContent());
+        TipPost tippost = list_tip.get(position);
+        holder.title.setText(tippost.getTitle());
+        holder.content.setText(tippost.getContent());
 
     }
 
     @Override
     public int getItemCount() {
-        return list_rec.size();
+        return list_tip.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{

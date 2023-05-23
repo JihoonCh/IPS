@@ -5,6 +5,10 @@ public class ReviewPost {
     private String title;
     private String content;
 
+    public ReviewPost() {
+        // Default constructor required for Firebase
+    }
+
     public ReviewPost(String postId, String title, String content) {
         this.postId = postId;
         this.title = title;

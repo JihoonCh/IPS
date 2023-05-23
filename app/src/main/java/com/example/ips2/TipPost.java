@@ -5,6 +5,10 @@ public class TipPost {
     private String title;
     private String content;
 
+    public TipPost() {
+        // Default constructor required for Firebase
+    }
+
     public TipPost(String postId, String title, String content) {
         this.postId = postId;
         this.title = title;
