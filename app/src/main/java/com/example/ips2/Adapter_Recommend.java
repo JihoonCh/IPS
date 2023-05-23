@@ -13,27 +13,27 @@ import java.util.ArrayList;
 
 public class Adapter_Recommend extends RecyclerView.Adapter<Adapter_Recommend.MyViewHolder> {
 
-    Context context;
+    Context context_rec;
 
-    ArrayList<RecommendPost> list;
+    ArrayList<RecommendPost> list_rec;
 
 
-    public Adapter_Recommend(Context context, ArrayList<RecommendPost> list) {
-        this.context = context;
-        this.list = list;
+    public Adapter_Recommend(Context context_rec, ArrayList<RecommendPost> list_rec) {
+        this.context_rec = context_rec;
+        this.list_rec = list_rec;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.item_recommend,parent,false);
+        View v = LayoutInflater.from(context_rec).inflate(R.layout.item_recommend,parent,false);
         return  new MyViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        RecommendPost recommendpost = list.get(position);
+        RecommendPost recommendpost = list_rec.get(position);
         holder.title.setText(recommendpost.getTitle());
         holder.content.setText(recommendpost.getContent());
 
@@ -41,7 +41,7 @@ public class Adapter_Recommend extends RecyclerView.Adapter<Adapter_Recommend.My
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return list_rec.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{

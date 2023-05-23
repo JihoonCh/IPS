@@ -9,7 +9,7 @@
     tools:context=".CRecommendActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id = "@+id/rv"
+        android:id = "@+id/rv_rec"
         android:layout_width ="match_parent"
         android:layout_height = "match_parent"
         android:scrollbarSize = "5dp"
@@ -26,5 +26,29 @@
         android:layout_gravity="right"
         android:layout_marginBottom="60dp"
         android:text="Write"></Button>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnCommunity"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="COMMUNITY" />
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnHome"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="HOME" />
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/btnMyPage"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="MYPAGE" />
+
+
+
 
 </LinearLayout>

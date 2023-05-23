@@ -1,32 +1,68 @@
 package com.example.ips2;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+
+import java.util.ArrayList;
+import android.util.Log;
 public class CTipsActivity extends AppCompatActivity {
 
-    Button btnCommunity, btnHome, btnMypage, btnTipWrite;
+    Button btnCommunity, btnHome, btnMypage, btnWrite;
 
-    @SuppressLint("MissingInflatedId")
+    RecyclerView recyclerView;
+    DatabaseReference database;
+    Adapter_Tips adapter_tips;
+    ArrayList<TipPost> list_tip;
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.community_tips);
 
+        recyclerView = findViewById(R.id.rv_tip);
+        database = FirebaseDatabase.getInstance().getReference("Tipposts");
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        setTitle("메뉴판-음식추천앱");
+        list_tip = new ArrayList<>();
+        adapter_tips = new Adapter_Tips(this,list_tip);
+        recyclerView.setAdapter(adapter_tips);
 
+        database.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+
+                    TipPost tippost = dataSnapshot.getValue(TipPost.class);
+                    list_tip.add(tippost);
+                }
+                adapter_tips.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         // 버튼변수에 버튼객체 대입
-        btnCommunity = (Button) findViewById(R.id.btnCommunity);
-        btnHome = (Button) findViewById(R.id.btnHome);
-        btnMypage = (Button) findViewById(R.id.btnMyPage);
-        btnTipWrite = (Button) findViewById(R.id.btnTipWrite);
+        btnWrite = (Button) findViewById(R.id.btnWrite);
+        btnCommunity = findViewById(R.id.btnCommunity);
+        btnHome = findViewById(R.id.btnHome);
+        btnMypage = findViewById(R.id.btnMyPage);
 
         // 커뮤니티 화면
         btnCommunity.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +90,7 @@ public class CTipsActivity extends AppCompatActivity {
             }
         });
         // 글쓰기 버튼
-        btnTipWrite.setOnClickListener(new View.OnClickListener() {
+        btnWrite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), TipWriteActivity.class);
