@@ -5,144 +5,139 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/korean"
-        android:layout_width="130dp"
-        android:layout_height="37dp"
-        android:text="Korean Cuisine"
-        android:textSize="11dp"
-        android:fontFamily="@font/sun_b"
-        app:layout_constraintBaseline_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297" />
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <Button
-        android:id="@+id/chinese"
-        android:layout_width="130dp"
-        android:layout_height="37dp"
-        android:text="Chinese Cuisine"
-        android:textSize="11dp"
-        android:fontFamily="@font/sun_b"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.785"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44" />
+        <Button
+            android:id="@+id/next_fromEat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
+            android:text="Next" />
 
-    <Button
-        android:id="@+id/western"
-        android:layout_width="130dp"
-        android:layout_height="37dp"
-        android:text="Western Cuisine"
-        android:textSize="11dp"
-        android:fontFamily="@font/sun_b"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.153"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44" />
+        <Button
+            android:id="@+id/home_fromEat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
+            android:text="Home" />
 
-    <Button
-        android:id="@+id/bakery"
-        android:layout_width="130dp"
-        android:layout_height="37dp"
-        android:text="Bakery"
-        android:textSize="11dp"
-        android:fontFamily="@font/sun_b"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.587" />
-
-    <Button
-        android:id="@+id/japanese"
-        android:layout_width="130dp"
-        android:layout_height="37dp"
-        android:text="Japanese Cuisine"
-        android:textSize="11dp"
-        android:fontFamily="@font/sun_b"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.785"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.296" />
-
-    <Button
-        android:id="@+id/cafe"
-        android:layout_width="130dp"
-        android:layout_height="37dp"
-        android:text="Cafe"
-        android:textSize="11dp"
-        android:fontFamily="@font/sun_b"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.785"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.587" />
+        <Button
+            android:id="@+id/back_fromEat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
+            android:text="Back" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/ask_whatToeat"
         android:layout_width="match_parent"
         android:layout_height="35dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/sun_b"
+        android:gravity="center"
         android:text="What do you want to eat?"
         android:textColor="@color/black"
-        android:gravity="center"
         android:textSize="20dp"
-        android:fontFamily="@font/sun_b"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/home_fromEat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
+        android:id="@+id/korean"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="400dp"
         android:fontFamily="@font/sun_b"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:text="Korean Cuisine"
+        android:textSize="12dp"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/western"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.947" />
+        app:layout_constraintTop_toBottomOf="@+id/ask_whatToeat" />
 
     <Button
-        android:id="@+id/next_fromEat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next"
+        android:id="@+id/chinese"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="40dp"
         android:fontFamily="@font/sun_b"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.885"
+        android:text="Chinese Cuisine"
+        android:textSize="11dp"
+        app:layout_constraintEnd_toStartOf="@+id/japanese"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.947" />
+        app:layout_constraintTop_toBottomOf="@+id/korean" />
 
     <Button
-        android:id="@+id/back_fromEat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
+        android:id="@+id/western"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="400dp"
         android:fontFamily="@font/sun_b"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Western Cuisine"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintTop_toBottomOf="@+id/ask_whatToeat" />
+
+    <Button
+        android:id="@+id/bakery"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/sun_b"
+        android:gravity="center"
+        android:text="Bakery"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/cafe"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.947" />
+        app:layout_constraintTop_toBottomOf="@+id/chinese" />
+
+    <Button
+        android:id="@+id/japanese"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/sun_b"
+        android:text="Japanese Cuisine"
+        android:textSize="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/western" />
+
+    <Button
+        android:id="@+id/cafe"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/sun_b"
+        android:text="Cafe"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/japanese" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
