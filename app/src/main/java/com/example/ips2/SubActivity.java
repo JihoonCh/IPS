@@ -19,7 +19,8 @@ public class SubActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage_main);
-        setTitle("메뉴판-음식추천앱");
+        setTitle("MENU");
+
         // 버튼변수에 버튼객체 대입
         btnLogout=(Button)findViewById(R.id.btnLogout);
         btnCommunity = (Button) findViewById(R.id.btnCommunity);
