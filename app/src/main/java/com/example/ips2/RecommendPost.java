@@ -5,6 +5,10 @@ public class RecommendPost {
     private String title;
     private String content;
 
+    public RecommendPost() {
+        // Default constructor required for Firebase
+    }
+
     public RecommendPost(String postId, String title, String content) {
         this.postId = postId;
         this.title = title;
