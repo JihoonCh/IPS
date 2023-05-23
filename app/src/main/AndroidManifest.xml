@@ -44,6 +44,7 @@
         <activity android:name=".RestaurantActivity"/>
         <activity android:name=".GuActivity"/>
         <activity android:name=".MenuActivity"/>
+        <activity android:name=".FavoriteActivity"/>
         <activity android:name=".SplashActivity"/>
 
 

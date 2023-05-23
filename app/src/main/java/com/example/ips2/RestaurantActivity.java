@@ -38,7 +38,7 @@ public class RestaurantActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurant);
 
-        restaurantList = findViewById(R.id.resList);
+        restaurantList = findViewById(R.id.FavResList);
 
         Intent intent = getIntent(); //전달할 데이터를 받을 Intent
         String food_category = intent.getStringExtra("Food Category");

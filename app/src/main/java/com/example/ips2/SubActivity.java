@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SubActivity extends AppCompatActivity {
 
-    Button btnCommunity, btnHome, btnMypage;
+    Button btnCommunity, btnHome, btnMypage, btnBookmark;
     Button btnLogout;
 
     @SuppressLint("MissingInflatedId")
@@ -25,7 +25,7 @@ public class SubActivity extends AppCompatActivity {
         btnCommunity = (Button) findViewById(R.id.btnCommunity);
         btnHome = (Button) findViewById(R.id.btnHome);
         btnMypage = (Button) findViewById(R.id.btnMyPage);
-
+        btnBookmark = (Button) findViewById(R.id.btnBookmark);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,6 +58,16 @@ public class SubActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),SubActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        //즐겨찾기 액티비티로 연결
+        btnBookmark.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SubActivity.this, FavoriteActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

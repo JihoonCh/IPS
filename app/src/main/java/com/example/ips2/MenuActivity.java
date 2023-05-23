@@ -1,6 +1,7 @@
 package com.example.ips2;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +17,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -78,7 +81,7 @@ public class MenuActivity extends AppCompatActivity {
                 if (menuResID == selectedResID) {
                     String menuName = jsonObject.getString("MenuName");
                     String menuPrice = jsonObject.getString("Price");
-                    String menuData = menuName + " - Price: " + menuPrice; // Combine menu name and price
+                    String menuData = menuName + "\nPrice: " + menuPrice; // Combine menu name and price
                     menuDataList.add(menuData);
                     count++; // 데이터 개수 카운트 증가
                 }
@@ -106,19 +109,80 @@ public class MenuActivity extends AppCompatActivity {
         }
     }
 
-    // FavoriteList에 ResName을 키로, text_resName의 값을 값으로 설정해서 저장하는 메서드
     private void addToFavorites(String resName) {
         try {
-            String jsonString = readJsonFromAssets("favoriteList.json");
-            JSONObject favoriteList = new JSONObject(jsonString);
-            favoriteList.put(resName, text_resName.getText().toString());
+            JSONObject favoriteObject = new JSONObject();
+            favoriteObject.put("ResName", resName);
 
-            // favoriteList를 파일에 다시 저장
-            // ...
+            // Load existing favorites from file
+            JSONArray favoritesArray = loadFavoritesFromFile();
 
+            // Check if the restaurant is already in favorites
+            if (!isRestaurantInFavorites(favoritesArray, resName)) {
+                // Add the restaurant to favorites
+                favoritesArray.put(favoriteObject);
+
+                // Save updated favorites to file
+                saveFavoritesToFile(favoritesArray);
+
+                // Show a success message
+                Toast.makeText(MenuActivity.this, "Added to favorites", Toast.LENGTH_SHORT).show();
+            } else {
+                // Show a message indicating that the restaurant is already in favorites
+                Toast.makeText(MenuActivity.this, "Restaurant is already in favorites", Toast.LENGTH_SHORT).show();
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    private JSONArray loadFavoritesFromFile() {
+        JSONArray favoritesArray = new JSONArray();
+
+        try {
+            InputStream inputStream = getApplicationContext().openFileInput("favoriteList.json");
+            int size = inputStream.available();
+            byte[] buffer = new byte[size];
+            inputStream.read(buffer);
+            inputStream.close();
+
+            String jsonString = new String(buffer, StandardCharsets.UTF_8);
+            if (!jsonString.isEmpty()) {
+                favoritesArray = new JSONArray(jsonString);
+            }
+        } catch (IOException | JSONException e) {
+            e.printStackTrace();
+        }
+
+        return favoritesArray;
+    }
+
+    private void saveFavoritesToFile(JSONArray favoritesArray) {
+        try {
+            FileOutputStream outputStream = getApplicationContext().openFileOutput("favoriteList.json", Context.MODE_PRIVATE);
+            outputStream.write(favoritesArray.toString().getBytes());
+            outputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private boolean isRestaurantInFavorites(JSONArray favoritesArray, String resName) {
+        for (int i = 0; i < favoritesArray.length(); i++) {
+            try {
+                JSONObject favoriteObject = favoritesArray.getJSONObject(i);
+                if (favoriteObject.has("ResName")) {
+                    String favoriteResName = favoriteObject.getString("ResName");
+                    if (favoriteResName.equals(resName)) {
+                        return true;
+                    }
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return false;
     }
 }
 
