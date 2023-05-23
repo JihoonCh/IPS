@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,6 +44,13 @@ public class RegisterActivity extends AppCompatActivity {
                 //회원가입 처리 시작
                 String strEmail = mEtEmail.getText().toString();
                 String strPwd = mEtPwd.getText().toString();
+
+                if (TextUtils.isEmpty(strEmail) || TextUtils.isEmpty(strPwd)) {
+                    //이메일 또는 비밀번호가 비어 있을 때
+                    Toast.makeText(RegisterActivity.this, "\n" +
+                            "Please enter your email and password", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 //Firebase Auth 진행
                 mFirebaseAuth.createUserWithEmailAndPassword(strEmail, strPwd).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {

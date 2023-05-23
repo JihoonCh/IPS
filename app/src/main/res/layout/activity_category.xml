@@ -10,16 +10,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/next_fromEat"
+            android:id="@+id/back_fromEat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
-            android:text="Next" />
+            android:text="Back" />
 
         <Button
             android:id="@+id/home_fromEat"
@@ -32,14 +35,14 @@
             android:text="Home" />
 
         <Button
-            android:id="@+id/back_fromEat"
+            android:id="@+id/next_fromEat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
-            android:text="Back" />
+            android:text="Next" />
+
     </LinearLayout>
 
     <TextView
@@ -63,12 +66,10 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="400dp"
         android:fontFamily="@font/sun_b"
         android:text="Korean Cuisine"
         android:textSize="12dp"
         app:layout_constraintBaseline_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toStartOf="@+id/western"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ask_whatToeat" />
@@ -93,11 +94,9 @@
         android:layout_height="48dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="400dp"
         android:fontFamily="@font/sun_b"
         android:text="Western Cuisine"
         android:textSize="11dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ask_whatToeat" />
 
