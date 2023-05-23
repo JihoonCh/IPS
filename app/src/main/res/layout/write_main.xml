@@ -10,20 +10,23 @@
         android:id="@+id/edtTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Title" />
+        android:hint="Title"
+        android:fontFamily="@font/sun_b"/>
 
     <EditText
         android:id="@+id/edtContents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="main"
-        android:lines="15" />
+        android:lines="15"
+        android:fontFamily="@font/sun_b"/>
 
     <Button
         android:id="@+id/btnPost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Finish" />
+        android:text="Finish"
+        android:fontFamily="@font/sun_b"/>
 
 
 </LinearLayout>

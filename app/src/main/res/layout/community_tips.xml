@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:gravity="center"
+        android:fontFamily="@font/sun_b"
         android:text="Tips/Etiquette"/>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -31,6 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginBottom="60dp"
+        android:fontFamily="@font/sun_b"
         android:text="Write"></Button>
 
     <LinearLayout
@@ -46,6 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
             android:text="COMMUNITY" />
         <Button
             android:layout_alignParentBottom="true"
@@ -54,6 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
             android:text="HOME" />
 
         <Button
@@ -63,6 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
             android:text="MYPAGE" />
     </LinearLayout>
 

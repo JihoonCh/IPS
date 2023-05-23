@@ -14,6 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/sun_b"
             android:text="What to eat?"
             android:textSize="30dp"
             android:padding="30dp"></TextView>
@@ -38,6 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:fontFamily="@font/sun_b"
             android:layout_weight="1"
             android:text="COMMUNITY" />
 
@@ -47,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:fontFamily="@font/sun_b"
             android:layout_weight="1"
             android:text="HOME" />
 
@@ -56,6 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
+            android:fontFamily="@font/sun_b"
             android:layout_weight="1"
             android:text="MYPAGE" />
 

@@ -12,6 +12,7 @@
             android:layout_height="wrap_content"
             android:textSize="30dp"
             android:gravity="center"
+            android:fontFamily="@font/sun_b"
             android:text="My Page"/>
 
 
@@ -20,6 +21,7 @@
             android:padding="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/sun_b"
             android:text="My Articles">
         </Button>
         <Button
@@ -27,6 +29,7 @@
             android:padding="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/sun_b"
             android:text="Scrapped Articles">
         </Button>
         <Button
@@ -34,6 +37,7 @@
             android:padding="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/sun_b"
             android:text="My Favorites">
         </Button>
 
@@ -42,6 +46,7 @@
             android:padding="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/sun_b"
             android:text="LogOut">
         </Button>
 
@@ -59,7 +64,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_weight="1"
-            android:text="COMMUNITY" />
+            android:text="COMMUNITY"
+            android:fontFamily="@font/sun_b"/>
 
         <Button
             android:id="@+id/btnHome"
@@ -68,7 +74,8 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_weight="1"
-            android:text="HOME" />
+            android:text="HOME"
+            android:fontFamily="@font/sun_b"/>
 
         <Button
             android:id="@+id/btnMyPage"
@@ -77,7 +84,8 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_weight="1"
-            android:text="MYPAGE" />
+            android:text="MYPAGE"
+            android:fontFamily="@font/sun_b"/>
 
     </LinearLayout>
 </RelativeLayout>
