@@ -22,25 +22,28 @@ import java.util.List;
 public class MenuActivity extends AppCompatActivity {
     private ListView menuList;  //메뉴들을 출력할 리스트뷰
     private TextView text_resName, text_resAddress, text_resPhoneNum;
-    private String ResName, ResAddress, ResID, ResPhoneNum;
+    private String selectedResName; // 선택된 식당의 ResName을 저장할 변수
+    private String selectedResAddress; // 선택된 식당의 LotAddress를 저장할 변수
+    private int selectedResID; // 선택된 식당의 ResID를 저장할 변수
+    private String selectedResPhoneNum; // 선택된 식당의 PhoneNum을 저장할 변수
 
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        Intent intent = getIntent(); //전달할 데이터를 받을 Intent
-        ResName = intent.getStringExtra("Selected ResName");
-        ResAddress = intent.getStringExtra("Selected ResAddress");
-        ResID = intent.getStringExtra("Selected ResID");
-        ResPhoneNum = intent.getStringExtra("Selected ResPhoneNum");
+        Intent intent = getIntent();
+        selectedResName = intent.getStringExtra("Selected ResName");
+        selectedResAddress = intent.getStringExtra("Selected ResAddress");
+        selectedResID = intent.getIntExtra("Selected ResID", -1);
+        selectedResPhoneNum = intent.getStringExtra("Selected ResPhoneNum");
 
         text_resName = findViewById(R.id.ResName);
-        text_resName.setText("Restaurant Name: " + ResName);
+        text_resName.setText("Restaurant Name: " + selectedResName);
         text_resAddress = findViewById(R.id.ResAddress);
-        text_resAddress.setText("Address: " + ResAddress);
+        text_resAddress.setText("Address: " + selectedResAddress);
         text_resPhoneNum = findViewById(R.id.ResPhoneNum);
-        text_resPhoneNum.setText("Phone Number: " + ResPhoneNum);
+        text_resPhoneNum.setText("Phone Number: " + selectedResPhoneNum);
 
         menuList = findViewById(R.id.Menu);
 
@@ -59,11 +62,13 @@ public class MenuActivity extends AppCompatActivity {
                 }
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                String menuResID = jsonObject.getString("ResID");
+                int menuResID = jsonObject.getInt("ResID");
 
-                if (menuResID.equals(ResID)) {
+                if (menuResID == selectedResID) {
                     String menuName = jsonObject.getString("MenuName");
-                    menuDataList.add(menuName);
+                    String menuPrice = jsonObject.getString("Price");
+                    String menuData = menuName + " - Price: " + menuPrice; // Combine menu name and price
+                    menuDataList.add(menuData);
                     count++; // 데이터 개수 카운트 증가
                 }
             }

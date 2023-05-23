@@ -66,6 +66,7 @@ public class RestaurantActivity extends AppCompatActivity {
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 String resType = jsonObject.getString("ResType");
+                int resID = jsonObject.getInt("ResID");
                 String lotAddress = jsonObject.getString("LotAddress");
 
                 if (resType.equals(food_category) && lotAddress.contains(location)) {
@@ -82,26 +83,32 @@ public class RestaurantActivity extends AppCompatActivity {
             ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dataList);
             restaurantList.setAdapter(adapter);
 
-            // 리스트뷰의 아이템 클릭 이벤트 처리
             restaurantList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    JSONObject jsonObject;
-                    try {
-                        jsonObject = jsonArray.getJSONObject(position);
-                        selectedResName = jsonObject.getString("ResName"); // 선택된 아이템의 ResName 저장
-                        selectedResID = jsonObject.getInt("ResID"); // 선택된 아이템의 ResID 저장
-                        selectedLotAddress = jsonObject.getString("LotAddress"); // 선택된 아이템의 LotAddress 저장
-                        selectedPhoneNum = jsonObject.getString("PhoneNum"); // 선택된 아이템의 PhoneNum 저장
-                        // 이후에 할 작업을 여기에 추가
-                        Intent intent = new Intent(RestaurantActivity.this, MenuActivity.class);
-                        intent.putExtra("Selected ResName", selectedResName);
-                        intent.putExtra("Selected ResID", selectedResID);
-                        intent.putExtra("Selected ResAddress", selectedLotAddress);
-                        intent.putExtra("Selected ResPhoneNum", selectedPhoneNum);
-                        startActivity(intent);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+                    String selectedResName = (String) parent.getItemAtPosition(position); // Get the clicked ResName
+
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        try {
+                            JSONObject jsonObject = jsonArray.getJSONObject(i);
+                            String resName = jsonObject.getString("ResName");
+
+                            if (resName.equals(selectedResName)) {
+                                selectedResID = Integer.parseInt(jsonObject.getString("ResID"));
+                                selectedLotAddress = jsonObject.getString("LotAddress");
+                                selectedPhoneNum = jsonObject.getString("PhoneNum");
+                                // 이후에 할 작업을 여기에 추가
+                                Intent intent = new Intent(RestaurantActivity.this, MenuActivity.class);
+                                intent.putExtra("Selected ResName", selectedResName);
+                                intent.putExtra("Selected ResID", selectedResID);
+                                intent.putExtra("Selected ResAddress", selectedLotAddress);
+                                intent.putExtra("Selected ResPhoneNum", selectedPhoneNum);
+                                startActivity(intent);
+                                break;
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             });
@@ -125,3 +132,4 @@ public class RestaurantActivity extends AppCompatActivity {
         }
     }
 }
+
