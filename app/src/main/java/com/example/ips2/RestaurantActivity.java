@@ -57,11 +57,11 @@ public class RestaurantActivity extends AppCompatActivity {
             JSONArray jsonArray = new JSONArray(jsonString);
             List<String> dataList = new ArrayList<>();
 
-            // "res.json"의 데이터를 파싱하여 ResType이 "foodcg"와 일치하고 ResID가 10020보다 작고, LotAddress에 location 값이 포함된 경우에만 ResName을 가져와서 리스트에 추가
+            //"res.json"의 데이터를 파싱하여 ResType이 food_category와 일치하고, LotAddress에 location 값이 포함된 경우에만 ResName을 가져와서 리스트에 추가
             int count = 0; // 가져온 데이터 개수를 카운트하기 위한 변수
             for (int i = 0; i < jsonArray.length(); i++) {
                 if (count >= 40) {
-                    break; // 최대 40개까지만 가져오기 위해 반복문 종료
+                    break; //최대 40개까지만 가져오기 위해 반복문 종료
                 }
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);

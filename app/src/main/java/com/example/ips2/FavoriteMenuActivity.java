@@ -25,7 +25,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MenuActivity extends AppCompatActivity {
+public class FavoriteMenuActivity extends AppCompatActivity {
     private ListView menuList;  //메뉴들을 출력할 리스트뷰
     private TextView text_resName, text_resAddress, text_resPhoneNum;
     private String selectedResName; // 선택된 식당의 ResName을 저장할 변수
@@ -37,7 +37,7 @@ public class MenuActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_favoritemenu);
 
         Intent intent = getIntent();
         selectedResName = intent.getStringExtra("Selected ResName");
@@ -56,10 +56,10 @@ public class MenuActivity extends AppCompatActivity {
         addFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //즐겨찾기 목록에 추가하는 함수 호출
-                addToFavorites(selectedResName);
+                //즐겨찾기 목록에서 제거하는 함수 호출
+                removeFromFavorites(selectedResName);
                 // 변경할 이미지 리소스
-                Drawable newDrawable = getResources().getDrawable(R.drawable.staricon);
+                Drawable newDrawable = getResources().getDrawable(R.drawable.staricon_before);
                 // ImageView의 srcCompat 변경
                 addFav.setImageDrawable(newDrawable);
             }
@@ -76,7 +76,6 @@ public class MenuActivity extends AppCompatActivity {
 
             // "menu.json"의 데이터를 파싱하여 ResID가 선택된 식당의 ResID와 일치하는 경우에만 메뉴 이름을 가져와서 리스트에 추가
             for (int i = 0; i < jsonArray.length(); i++) {
-
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 int menuResID = jsonObject.getInt("ResID");
 
@@ -110,31 +109,41 @@ public class MenuActivity extends AppCompatActivity {
         }
     }
 
-    private void addToFavorites(String resName) {
+    private void removeFromFavorites(String resName) {
         try {
-            JSONObject favoriteObject = new JSONObject();
-            favoriteObject.put("ResName", resName);
-
             //기존의 즐겨찾기 목록 파일을 불러옴
             JSONArray favoritesArray = loadFavoritesFromFile();
 
             //즐겨찾기 목록에 이미 존재하는지 체크
-            if (!isRestaurantInFavorites(favoritesArray, resName)) {
-                //식당을 즐겨찾기에 삽입
-                favoritesArray.put(favoriteObject);
+            int index = getRestaurantIndexInFavorites(favoritesArray, resName);
+            if (index != -1) {
+                //식당을 즐겨찾기에서 제거
+                favoritesArray.remove(index);
 
                 //업데이트된 즐겨찾기 목록을 파일에 저장
                 saveFavoritesToFile(favoritesArray);
 
-                //즐겨찾기에 추가됐음을 알리는 팝업
-                Toast.makeText(MenuActivity.this, "Added to favorites", Toast.LENGTH_SHORT).show();
+                //즐겨찾기에서 제거했음을 알리는 팝업
+                Toast.makeText(FavoriteMenuActivity.this, "Removed from favorites", Toast.LENGTH_SHORT).show();
             } else {
-                //이미 즐겨찾기에 존재함을 알리는 팝업
-                Toast.makeText(MenuActivity.this, "Restaurant is already in favorites", Toast.LENGTH_SHORT).show();
+                //즐겨찾기 목록에 없음을 알리는 팝업
+                Toast.makeText(FavoriteMenuActivity.this, "Restaurant is not in favorites", Toast.LENGTH_SHORT).show();
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    //즐겨찾기 목록에서 식당의 인덱스를 가져오는 함수
+    private int getRestaurantIndexInFavorites(JSONArray favoritesArray, String resName) throws JSONException {
+        for (int i = 0; i < favoritesArray.length(); i++) {
+            JSONObject favoriteObject = favoritesArray.getJSONObject(i);
+            String favoriteResName = favoriteObject.getString("ResName");
+            if (favoriteResName.equals(resName)) {
+                return i; //즐겨찾기 목록(배열)에서의 식당의 인덱스
+            }
+        }
+        return -1; //즐겨찾기 목록(배열)에 식당이 없는 경우
     }
 
     private JSONArray loadFavoritesFromFile() {
@@ -154,7 +163,6 @@ public class MenuActivity extends AppCompatActivity {
         } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
-
         return favoritesArray;
     }
 
@@ -167,23 +175,4 @@ public class MenuActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
-    private boolean isRestaurantInFavorites(JSONArray favoritesArray, String resName) {
-        for (int i = 0; i < favoritesArray.length(); i++) {
-            try {
-                JSONObject favoriteObject = favoritesArray.getJSONObject(i);
-                if (favoriteObject.has("ResName")) {
-                    String favoriteResName = favoriteObject.getString("ResName");
-                    if (favoriteResName.equals(resName)) {
-                        return true;
-                    }
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
-        return false;
-    }
 }
-
