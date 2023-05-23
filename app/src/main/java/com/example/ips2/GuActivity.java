@@ -22,7 +22,7 @@ public class GuActivity extends AppCompatActivity implements View.OnClickListene
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_address);
 
         btnSeongdong = (Button) findViewById(R.id.seongdong);
         btnMapo = (Button) findViewById(R.id.mapo);
