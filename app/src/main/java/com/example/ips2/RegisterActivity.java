@@ -58,14 +58,14 @@ public class RegisterActivity extends AppCompatActivity {
                             //setValue: datatbase에 insert(삽입)하는 행위
                             mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
 
-                            Toast.makeText(RegisterActivity.this, "회원가입에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Registration successful!", Toast.LENGTH_SHORT).show();
                             Intent myIntent = new Intent(RegisterActivity.this, MainActivity.class);
                             startActivity(myIntent);
                             finish();
                         } else {
                             if (strPwd.length() < 6)
-                                Toast.makeText(RegisterActivity.this, "비밀번호는 6자리 이상이어야 합니다.", Toast.LENGTH_SHORT).show();
-                            else Toast.makeText(RegisterActivity.this, "회원가입에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegisterActivity.this, "Password must be 6 digits or longer", Toast.LENGTH_SHORT).show();
+                            else Toast.makeText(RegisterActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

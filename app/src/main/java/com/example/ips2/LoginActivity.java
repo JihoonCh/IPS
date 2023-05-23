@@ -2,6 +2,7 @@ package com.example.ips2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,6 +43,12 @@ public class LoginActivity extends AppCompatActivity {
                 String strEmail = mEtEmail.getText().toString();
                 String strPwd = mEtPwd.getText().toString();
 
+                if (TextUtils.isEmpty(strEmail) || TextUtils.isEmpty(strPwd)) {
+                    //이메일 또는 비밀번호가 비어 있을 때
+                    Toast.makeText(LoginActivity.this, "\n" +
+                            "Please enter your email and password", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 mFirebaseAuth.signInWithEmailAndPassword(strEmail, strPwd).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -52,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                             finish(); //현재 액티비티 파괴
                         } else {
                             //로그인 실패
-                            Toast.makeText(LoginActivity.this, "로그인 실패!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Login failed!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
