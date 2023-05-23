@@ -17,8 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        setTitle("MENU");
+        
 
         // 버튼변수에 버튼객체 대입
         Button btnCommunity = (Button) findViewById(R.id.btnCommunity);

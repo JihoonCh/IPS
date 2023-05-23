@@ -18,8 +18,6 @@ public class CommunityActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.community_main);
 
-        setTitle("MENU");
-
         btnTips= (Button) findViewById(R.id.btnTips);
         btnReviews= (Button) findViewById(R.id.btnReviews);
         btnRes= (Button) findViewById(R.id.btnRes);

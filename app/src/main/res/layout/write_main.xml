@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:background="@color/orange1">
 
     <EditText
         android:id="@+id/edtTitle"
@@ -26,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Finish"
+        android:background="@color/pink"
         android:fontFamily="@font/sun_b"/>
 
 
