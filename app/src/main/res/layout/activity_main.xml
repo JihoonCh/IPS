@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,26 +27,38 @@
             android:src="@drawable/keyword"/>
     </LinearLayout>
 
-    <Button
-        android:layout_alignParentBottom="true"
-        android:id="@+id/btnCommunity"
-        android:layout_width="130dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="COMMUNITY" />
-    <Button
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/btnHome"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:text="HOME" />
-    <Button
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:id="@+id/btnMyPage"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:text="MYPAGE" />
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
 
+        <Button
+            android:id="@+id/btnCommunity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:text="COMMUNITY" />
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:text="HOME" />
+
+        <Button
+            android:id="@+id/btnMyPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:text="MYPAGE" />
+
+    </LinearLayout>
 
 </RelativeLayout>
