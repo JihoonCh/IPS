@@ -7,45 +7,43 @@
 
     <TextView
         android:id="@+id/ResPhoneNum"
-        android:layout_width="307dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="536dp"
+        android:layout_width="346dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="532dp"
         android:text="Phone Number: "
         android:textColor="@color/black"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintHorizontal_bias="0.569"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/ResAddress"
-        android:layout_width="306dp"
-        android:layout_height="48dp"
+        android:layout_width="347dp"
+        android:layout_height="66dp"
         android:text="Address: "
         android:textColor="@color/black"
         android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/ResPhoneNum"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.561"
+        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ResName"
-        app:layout_constraintVertical_bias="0.375" />
+        app:layout_constraintTop_toBottomOf="@+id/ResName" />
+
 
     <TextView
         android:id="@+id/ResName"
-        android:layout_width="310dp"
-        android:layout_height="59dp"
+        android:layout_width="343dp"
+        android:layout_height="57dp"
         android:text="Restaurant Name: "
         android:textColor="@color/black"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053" />
-
+        app:layout_constraintVertical_bias="0.023" />
 
     <ListView
         android:id="@+id/Menu"
@@ -72,5 +70,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.951" />
+
+    <ImageView
+        android:id="@+id/addFavorite"
+        android:layout_width="35dp"
+        android:layout_height="39dp"
+        app:srcCompat="@drawable/staricon"
+        tools:layout_editor_absoluteX="339dp"
+        tools:layout_editor_absoluteY="209dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,9 @@ package com.example.ips2;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -26,6 +28,7 @@ public class MenuActivity extends AppCompatActivity {
     private String selectedResAddress; // 선택된 식당의 LotAddress를 저장할 변수
     private int selectedResID; // 선택된 식당의 ResID를 저장할 변수
     private String selectedResPhoneNum; // 선택된 식당의 PhoneNum을 저장할 변수
+    private ImageView addFav;
 
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +48,14 @@ public class MenuActivity extends AppCompatActivity {
         text_resPhoneNum = findViewById(R.id.ResPhoneNum);
         text_resPhoneNum.setText("Phone Number: " + selectedResPhoneNum);
 
+        addFav = findViewById(R.id.addFavorite);
+        addFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addToFavorites(selectedResName);
+            }
+        });
+
         menuList = findViewById(R.id.Menu);
 
         // assets에서 "menu.json" 파일 읽기
@@ -57,8 +68,8 @@ public class MenuActivity extends AppCompatActivity {
             // "menu.json"의 데이터를 파싱하여 ResID가 선택된 식당의 ResID와 일치하는 경우에만 메뉴 이름을 가져와서 리스트에 추가
             int count = 0; // 가져온 데이터 개수를 카운트하기 위한 변수
             for (int i = 0; i < jsonArray.length(); i++) {
-                if (count >= 30) {
-                    break; // 최대 30개까지만 가져오기 위해 반복문 종료
+                if (count >= 40) {
+                    break; // 최대 40개까지만 가져오기 위해 반복문 종료
                 }
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
@@ -92,6 +103,21 @@ public class MenuActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
             return null;
+        }
+    }
+
+    // FavoriteList에 ResName을 키로, text_resName의 값을 값으로 설정해서 저장하는 메서드
+    private void addToFavorites(String resName) {
+        try {
+            String jsonString = readJsonFromAssets("favoriteList.json");
+            JSONObject favoriteList = new JSONObject(jsonString);
+            favoriteList.put(resName, text_resName.getText().toString());
+
+            // favoriteList를 파일에 다시 저장
+            // ...
+
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
     }
 }

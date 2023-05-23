@@ -32,7 +32,6 @@ public class Adapter_Recommend extends RecyclerView.Adapter<Adapter_Recommend.My
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
         RecommendPost recommendpost = list.get(position);
         holder.title.setText(recommendpost.getTitle());
         holder.content.setText(recommendpost.getContent());
