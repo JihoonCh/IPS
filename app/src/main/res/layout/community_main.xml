@@ -9,9 +9,9 @@
         android:textSize="30dp"
         android:gravity="center"
         android:text="Community"
-        android:paddingTop="10dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
         android:textColor="@color/hotpink"
-        android:paddingBottom="10dp"
         android:fontFamily="@font/sun_b"/>
 
     <RelativeLayout
