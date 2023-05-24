@@ -49,7 +49,7 @@ public class OpenPostRecommendActivity extends AppCompatActivity {
 
         if (postId == null) {
             // postId가 null인 경우 처리
-            Toast.makeText(this, "댓글을 작성할 게시물을 찾을 수 없습니다.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Cannot find post that have comments", Toast.LENGTH_SHORT).show();
             finish();
         } else {
             // 게시물 데이터를 불러와서 출력
@@ -80,14 +80,14 @@ public class OpenPostRecommendActivity extends AppCompatActivity {
                         contentTextView.setText(content);
                     }
                 } else {
-                    Toast.makeText(OpenPostRecommendActivity.this, "게시물을 찾을 수 없습니다.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OpenPostRecommendActivity.this, "Cannot find the post", Toast.LENGTH_SHORT).show();
                     finish();
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(OpenPostRecommendActivity.this, "게시물을 불러오는데 실패했습니다.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(OpenPostRecommendActivity.this, "Failed to load the post", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
@@ -108,7 +108,7 @@ public class OpenPostRecommendActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(OpenPostRecommendActivity.this, "댓글을 불러오는데 실패했습니다.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(OpenPostRecommendActivity.this, "Failed to load comments", Toast.LENGTH_SHORT).show();
             }
         });
     }

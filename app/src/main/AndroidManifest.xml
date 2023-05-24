@@ -51,6 +51,9 @@
         <activity android:name=".Comment"/>
         <activity android:name=".OpenPostRecommendActivity"/>
         <activity android:name=".OpenPostTipActivity"/>
+        <activity android:name=".ScrapActivity"/>
+        <activity android:name=".ScrapPost"/>
+        <activity android:name=".ScrapAdapter"/>
 
 
     </application>

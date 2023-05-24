@@ -89,7 +89,7 @@ public class OpenPostTipActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(com.example.ips2.OpenPostTipActivity.this, "Failed to load posts", Toast.LENGTH_SHORT).show();
+                Toast.makeText(com.example.ips2.OpenPostTipActivity.this, "Failed to load the post", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });

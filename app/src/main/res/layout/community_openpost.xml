@@ -7,6 +7,15 @@
     android:padding="16dp"
     android:background="@color/orange1">
 
+    <ImageView
+        android:id="@+id/addToScrapImage"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/staricon_before" />
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -19,7 +28,7 @@
 
         <TextView
             android:id="@+id/postTitle"
-            android:layout_width="387dp"
+            android:layout_width="match_parent"
             android:layout_height="74dp"
             android:fontFamily="@font/sun_b"
             android:textColor="@color/gray1"

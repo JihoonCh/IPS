@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SubActivity extends AppCompatActivity {
 
-    Button btnCommunity, btnHome, btnMypage, btnBookmark;
+    Button btnCommunity, btnHome, btnMypage, btnBookmark, btnScrap;
     Button btnLogout;
 
     @SuppressLint("MissingInflatedId")
@@ -27,6 +27,7 @@ public class SubActivity extends AppCompatActivity {
         btnHome = (Button) findViewById(R.id.btnHome);
         btnMypage = (Button) findViewById(R.id.btnMyPage);
         btnBookmark = (Button) findViewById(R.id.btnBookmark);
+        btnScrap = (Button) findViewById(R.id.btnScrap);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,6 +45,16 @@ public class SubActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //스크랩 화면
+        btnScrap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ScrapActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // 홈화면
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
