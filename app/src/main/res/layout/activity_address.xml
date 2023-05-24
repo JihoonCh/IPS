@@ -8,7 +8,7 @@
     <TableRow>
 
         <TextView
-            android:textColor="@color/grapefruit"
+            android:textColor="@color/gray1"
             android:id="@+id/textView2"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
@@ -16,8 +16,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
             android:gravity="center"
-            android:text="Select your Current Location!"
-
+            android:text="Select your Current Location"
             android:textSize="20sp" />
 
     </TableRow>
@@ -115,7 +114,7 @@
             android:id="@+id/songpa"
             android:text="Songpa-gu"
             android:layout_width="wrap_content"
-            android:layout_height="40dp" />
+            android:layout_height="40dp"/>
 
         <Button
             android:layout_margin="5dp"
