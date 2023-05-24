@@ -2831,7 +2831,7 @@
 {"ResID":"49986","ResName":"JamJam Bakery","LotAddress":"108 | Samjeon-dong | Songpa-gu | Seoul","PhoneNum":"070-7766-0304","ResType":"Cafe"},
 {"ResID":"49987","ResName":"The masinneun jokbal bossam","LotAddress":"75-15 | Garak-dong | Songpa-gu | Seoul","PhoneNum":"02-400-7851","ResType":"Korean Cuisine"},
 {"ResID":"49990","ResName":"Gong cha","LotAddress":"19-9 | Songpa-dong | Songpa-gu | Seoul","PhoneNum":"02-6326-7030","ResType":"Cafe"},
-{"ResID":"49994","ResName":"Ssada Gimbap","LotAddress":"133-5 | Samjeon-dong | Songpa-gu | Seoul","PhoneNum":"02-420-2919","ResType":"Korean Cuisine"}
+{"ResID":"49994","ResName":"Ssada Gimbap","LotAddress":"133-5 | Samjeon-dong | Songpa-gu | Seoul","PhoneNum":"02-420-2919","ResType":"Korean Cuisine"},
   {"ResID":"50000","ResName":"this is tuna","LotAddress":"Korea Atrium, #49, 101, Galwol-dong, Yongsan-gu, Seoul","PhoneNum":"02 7901161","ResType":"Japanese Cuisine"},
   {"ResID":"50001","ResName":"Hangang-dong","LotAddress":"2, 49, Hangang-ro 3-ga, Yongsan-gu, Seoul","PhoneNum":"221357876","ResType":"Japanese Cuisine"},
   {"ResID":"50002","ResName":"Boss Ramen","LotAddress":"Yongsan Electronic Land (6th floor), 16, Hangang-ro 3-ga, Yongsan-gu, Seoul","PhoneNum":"50713722090","ResType":"Japanese Cuisine"},
@@ -2873,5 +2873,5 @@
   {"ResID":"50040","ResName":"Brady Post","LotAddress":"2nd floor, 6, Hangang-daero 44-gil, Yongsan-gu, Seoul","PhoneNum":"0507-1347-9451","ResType":"Cafe"},
   {"ResID":"50041","ResName":"Eul's Coffee","LotAddress":"1F, 13, Cheongpa-ro 47na-gil, Yongsan-gu, Seoul","PhoneNum":"02-701-0116","ResType":"Cafe"},
   {"ResID":"50042","ResName":"Cheongpa Mention","LotAddress":"20, Cheongpa-ro 47na-gil, Yongsan-gu, Seoul","PhoneNum":"02-706-9093","ResType":"Cafe"},
-  {"ResID":"50043","ResName":"acorn","LotAddress":"1F, 25-6, Hangang-daero 52-gil, Yongsan-gu, Seoul","PhoneNum":"0507-1498-0225","ResType":"Cafe"},
+  {"ResID":"50043","ResName":"acorn","LotAddress":"1F, 25-6, Hangang-daero 52-gil, Yongsan-gu, Seoul","PhoneNum":"0507-1498-0225","ResType":"Cafe"}
 ]
