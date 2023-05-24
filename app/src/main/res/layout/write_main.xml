@@ -27,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Finish"
+        android:textColor="@color/gray1"
         android:background="@color/pink"
         android:fontFamily="@font/sun_b"/>
 

@@ -34,40 +34,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
-
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom">
         <Button
             android:id="@+id/btnCommunity"
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:fontFamily="@font/sun_b"
+            android:text="COMMUNITY"
             android:layout_weight="1"
-            android:background="@color/pink"
-            android:text="COMMUNITY" />
-
+            android:layout_marginRight="20dp"
+            android:textColor="@color/gray1"
+            android:background="@color/pink"/>
         <Button
-            android:id="@+id/btnHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:fontFamily="@font/sun_b"
-            android:background="@color/pink"
-            android:layout_weight="1"
-            android:text="HOME" />
-
-        <Button
-            android:id="@+id/btnMyPage"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnHome"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
             android:fontFamily="@font/sun_b"
-            android:background="@color/pink"
+            android:text="HOME"
             android:layout_weight="1"
-            android:text="MYPAGE" />
-
+            android:layout_marginRight="20dp"
+            android:textColor="@color/gray1"
+            android:background="@color/pink"/>
+        <Button
+            android:layout_alignParentRight="true"
+            android:id="@+id/btnMyPage"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sun_b"
+            android:layout_weight="1"
+            android:text="MYPAGE"
+            android:textColor="@color/gray1"
+            android:background="@color/pink"/>
     </LinearLayout>
 
 </RelativeLayout>
