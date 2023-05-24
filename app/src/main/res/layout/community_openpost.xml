@@ -66,31 +66,36 @@
         android:layout_width="match_parent"
         android:id="@+id/linear1"
         android:layout_height="wrap_content"
-
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/sun_b">
 
         <View
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/hotpink" />
+            android:fontFamily="@font/sun_b"
+            />
 
         <EditText
             android:id="@+id/commentEditText"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:fontFamily="@font/sun_b"
-            android:hint="Write Comment" />
+            android:background="@color/yellow12"
+            android:hint="  Write Comment" />
 
         <Button
+            android:layout_marginTop="15dp"
             android:id="@+id/commentButton"
-            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
-            android:text="Post Comment" />
+            android:text="Post Comment"
+            android:background="@color/pink"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

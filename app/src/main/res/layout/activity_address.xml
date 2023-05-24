@@ -2,8 +2,7 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="800dp"
-    android:background="@color/orange1"
-    >
+    android:background="@color/orange1">
 
     <TableRow>
 
@@ -24,22 +23,22 @@
 
         <Button
             android:layout_margin="5dp"
-            android:background="@color/pink"
             android:id="@+id/guro"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
+            android:background="@color/pink"
             android:text="Guro-gu" />
 
         <Button
             android:layout_margin="5dp"
-            android:background="@color/pink"
             android:id="@+id/jung"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
+            android:background="@color/pink"
             android:text="Jung-gu" />
 
         <Button

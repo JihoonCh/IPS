@@ -32,11 +32,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:gravity="bottom">
         <Button
+            android:layout_alignParentBottom="true"
             android:id="@+id/btnCommunity"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
@@ -47,6 +48,7 @@
             android:textColor="@color/gray1"
             android:background="@color/pink"/>
         <Button
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:id="@+id/btnHome"
             android:layout_width="110dp"
@@ -58,6 +60,7 @@
             android:textColor="@color/gray1"
             android:background="@color/pink"/>
         <Button
+            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:id="@+id/btnMyPage"
             android:layout_width="110dp"

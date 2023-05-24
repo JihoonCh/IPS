@@ -14,8 +14,8 @@
             android:layout_height="wrap_content"
             android:textSize="30dp"
             android:gravity="center"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
             android:fontFamily="@font/sun_b"
             android:textColor="@color/hotpink"
             android:text="My Page"/>
@@ -28,7 +28,8 @@
             android:fontFamily="@font/sun_b"
             android:text="My Favorites"
             android:textColor="@color/gray1"
-            android:background="@color/pink">
+            android:background="@color/pink"
+            android:layout_marginBottom="8dp">
         </Button>
         <Button
             android:id="@+id/btnScrap"
@@ -38,7 +39,8 @@
             android:fontFamily="@font/sun_b"
             android:text="Scrapped Articles"
             android:textColor="@color/gray1"
-            android:background="@color/pink">
+            android:background="@color/pink"
+            android:layout_marginBottom="8dp">
         </Button>
 
         <Button
