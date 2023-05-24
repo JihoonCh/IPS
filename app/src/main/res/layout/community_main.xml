@@ -2,14 +2,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange1">
+    android:background="@color/brown1">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:gravity="center"
         android:text="Community"
-        android:textColor="@color/brown"
+        android:paddingTop="10dp"
+        android:textColor="@color/brown2"
+        android:paddingBottom="10dp"
         android:fontFamily="@font/sun_b"/>
 
     <RelativeLayout
@@ -25,7 +27,7 @@
             android:layout_margin="30dp"
             android:fontFamily="@font/sun_b"
             android:text="Tips/Etiquette"
-            android:background="@color/brown"
+            android:background="@color/brown2"
             android:textColor="@color/brown1"
             android:textSize="30dp"></Button>
 
@@ -36,10 +38,9 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:fontFamily="@font/sun_b"
-            android:background="@color/brown"
+            android:background="@color/brown2"
             android:textColor="@color/brown1"
             android:text="Food Reviews"
-
             android:textSize="30dp"></Button>
 
         <Button
@@ -48,11 +49,14 @@
             android:layout_height="130dp"
             android:layout_below="@+id/btnReviews"
             android:layout_centerHorizontal="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
             android:fontFamily="@font/sun_b"
             android:text="Good place"
+            android:background="@color/brown2"
             android:textColor="@color/brown1"
-            android:background="@color/brown"
-            android:layout_margin="30dp"
             android:textSize="30dp"></Button>
 
     </RelativeLayout>
@@ -71,7 +75,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
             android:text="COMMUNITY"
-            android:textColor="@color/brown"
+            android:textColor="@color/white"
             android:background="@color/yellow12"/>
 
         <Button
@@ -83,7 +87,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
             android:text="HOME"
-            android:textColor="@color/brown"
+            android:textColor="@color/white"
             android:background="@color/yellow12"/>
 
         <Button
@@ -95,7 +99,7 @@
             android:fontFamily="@font/sun_b"
             android:layout_weight="1"
             android:text="MYPAGE"
-            android:textColor="@color/brown"
+            android:textColor="@color/white"
             android:background="@color/yellow12"/>
 
     </LinearLayout>

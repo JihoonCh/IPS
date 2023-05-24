@@ -13,6 +13,9 @@
         android:textSize="30dp"
         android:gravity="center"
         android:fontFamily="@font/sun_b"
+        android:textColor="@color/brown"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:text="Good Place"/>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -33,7 +36,8 @@
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/sun_b"
         android:text="Write"
-        android:background="@color/pink"></Button>
+        android:textColor="@color/brown"
+        android:background="@color/yellow12"></Button>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,7 +54,8 @@
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
             android:text="COMMUNITY"
-            android:background="@color/pink"/>
+            android:textColor="@color/brown"
+            android:background="@color/yellow12"/>
         <Button
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
@@ -60,7 +65,8 @@
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
             android:text="HOME"
-            android:background="@color/pink"/>
+            android:textColor="@color/brown"
+            android:background="@color/yellow12"/>
         <Button
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
@@ -70,7 +76,8 @@
             android:fontFamily="@font/sun_b"
             android:layout_weight="1"
             android:text="MYPAGE"
-            android:background="@color/pink"/>
+            android:textColor="@color/brown"
+            android:background="@color/yellow12"/>
     </LinearLayout>
 
 </LinearLayout>

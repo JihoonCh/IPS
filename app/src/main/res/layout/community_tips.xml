@@ -6,13 +6,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".CTipsActivity"
+    android:paddingTop="10dp"
     android:background="@color/orange1">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:gravity="center"
+        android:paddingBottom="10dp"
         android:fontFamily="@font/sun_b"
+        android:textColor="@color/brown"
         android:text="Tips/Etiquette"/>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -24,6 +27,7 @@
         android:scrollbarThumbVertical="@android:color/darker_gray"
         android:scrollbars = "vertical"
         android:layout_weight = "1"
+        android:fontFamily="@font/sun_b"
         ></androidx.recyclerview.widget.RecyclerView>
 
     <Button
@@ -33,7 +37,8 @@
         android:layout_gravity="right"
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/sun_b"
-        android:background="@color/pink"
+        android:textColor="@color/brown"
+        android:background="@color/yellow12"
         android:text="Write"></Button>
 
     <LinearLayout
@@ -41,38 +46,40 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="bottom">
-
-
         <Button
             android:layout_alignParentBottom="true"
             android:id="@+id/btnCommunity"
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:fontFamily="@font/sun_b"
-            android:background="@color/yellow12"
-            android:text="COMMUNITY" />
+            android:text="COMMUNITY"
+            android:layout_weight="1"
+            android:textColor="@color/brown"
+            android:layout_marginRight="20dp"
+            android:background="@color/yellow12"/>
         <Button
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:id="@+id/btnHome"
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:fontFamily="@font/sun_b"
-            android:background="@color/pink"
-            android:text="HOME" />
-
+            android:text="HOME"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/brown"
+            android:background="@color/yellow12"/>
         <Button
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:id="@+id/btnMyPage"
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:fontFamily="@font/sun_b"
-            android:background="@color/pink"
-            android:text="MYPAGE" />
+            android:layout_weight="1"
+            android:text="MYPAGE"
+            android:textColor="@color/brown"
+            android:background="@color/yellow12"/>
     </LinearLayout>
 
 </LinearLayout>

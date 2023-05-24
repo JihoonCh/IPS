@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/orange1">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,6 +14,8 @@
             android:layout_height="wrap_content"
             android:textSize="30dp"
             android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:fontFamily="@font/sun_b"
             android:text="My Page"/>
 
@@ -24,7 +27,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
             android:text="My Articles"
-            android:background="@color/pink">
+            android:textColor="@color/brown"
+            android:background="@color/yellow12">
         </Button>
         <Button
             android:id="@+id/btnScrap"
@@ -33,7 +37,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
             android:text="Scrapped Articles"
-            android:background="@color/pink">
+            android:textColor="@color/brown"
+            android:background="@color/yellow12">
         </Button>
         <Button
             android:id="@+id/btnBookmark"
@@ -42,7 +47,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
             android:text="My Favorites"
-            android:background="@color/pink">
+            android:textColor="@color/brown"
+            android:background="@color/yellow12">
         </Button>
 
         <Button
@@ -52,48 +58,48 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
             android:text="LogOut"
-            android:background="@color/pink">
+            android:textColor="@color/brown"
+            android:background="@color/yellow12">
         </Button>
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/btnCommunity"
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_weight="1"
-            android:text="COMMUNITY"
+            android:text=" COMMUNITY"
+            android:paddingRight="10dp"
             android:fontFamily="@font/sun_b"
-            android:background="@color/pink"/>
+            android:textColor="@color/brown"
+            android:background="@color/yellow12"/>
 
         <Button
             android:id="@+id/btnHome"
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_weight="1"
             android:text="HOME"
             android:fontFamily="@font/sun_b"
-            android:background="@color/pink"/>
+            android:textColor="@color/brown"
+            android:background="@color/yellow12"/>
 
         <Button
             android:id="@+id/btnMyPage"
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_weight="1"
             android:text="MYPAGE"
             android:fontFamily="@font/sun_b"
-            android:background="@color/pink"/>
+            android:textColor="@color/brown"
+            android:background="@color/yellow12"/>
+    </RelativeLayout>
 
-    </LinearLayout>
 </RelativeLayout>

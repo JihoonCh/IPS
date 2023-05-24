@@ -6,13 +6,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".CReviewsActivity"
+    android:paddingTop="10dp"
     android:background="@color/orange1">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:gravity="center"
+        android:paddingBottom="10dp"
         android:fontFamily="@font/sun_b"
+        android:textColor="@color/brown"
         android:text="Reviews" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -24,6 +27,7 @@
         android:scrollbarThumbVertical="@android:color/darker_gray"
         android:scrollbars = "vertical"
         android:layout_weight = "1"
+        android:fontFamily="@font/sun_b"
         ></androidx.recyclerview.widget.RecyclerView>
     <Button
         android:id="@+id/btnWrite"
@@ -33,7 +37,8 @@
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/sun_b"
         android:text="Write"
-        android:background="@color/pink"></Button>
+        android:textColor="@color/brown"
+        android:background="@color/yellow12"></Button>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,7 +55,8 @@
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
             android:text="COMMUNITY"
-            android:background="@color/pink"/>
+            android:textColor="@color/brown"
+            android:background="@color/yellow12"/>
         <Button
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
@@ -60,7 +66,8 @@
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
             android:text="HOME"
-            android:background="@color/pink"/>
+            android:textColor="@color/brown"
+            android:background="@color/yellow12"/>
         <Button
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
@@ -70,7 +77,8 @@
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
             android:text="MYPAGE"
-            android:background="@color/pink"/>
+            android:textColor="@color/brown"
+            android:background="@color/yellow12"/>
     </LinearLayout>
 
 </LinearLayout>
