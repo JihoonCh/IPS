@@ -1,172 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="800dp"
+    android:background="@color/orange1"
+    >
 
     <TableRow>
+
         <TextView
+            android:textColor="@color/grapefruit"
             android:id="@+id/textView2"
-            android:text="Select your Current Location!"
-            android:textSize="20sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_span="3"
+            android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
             android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_span="3"/>
+            android:text="Select your Current Location!"
+
+            android:textSize="20sp" />
 
     </TableRow>
     <TableRow>
 
         <Button
-            android:id="@+id/gangdong"
-            android:text="Gangdong-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:id="@+id/guro"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
+            android:text="Guro-gu" />
 
         <Button
-            android:id="@+id/eunpyeong"
-            android:text="Eunpyeong-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:id="@+id/jung"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
+            android:text="Jung-gu" />
 
         <Button
-            android:id="@+id/gangbuk"
-            android:text="Gangbuk-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:id="@+id/mapo"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
+            android:text="Mapo-gu" />
 
     </TableRow>
 
     <TableRow>
 
         <Button
-            android:id="@+id/gangnam"
-            android:text="Gangnam-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/seocho"
-            android:text="Seocho-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/geumcheon"
-            android:text="Geumcheon-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </TableRow>
-
-
-    <TableRow>
-
-        <Button
+            android:layout_margin="5dp"
             android:id="@+id/jongno"
-            android:text="Jongno-gu"
+            android:background="@color/pink"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
+            android:text="Jongno-gu" />
 
         <Button
-            android:id="@+id/seongdong"
-            android:text="Seongdong-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/yongsan"
-            android:text="Yongsan-gu "
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </TableRow>
-
-
-    <TableRow>
-
-        <Button
-            android:id="@+id/songpa"
-            android:text="Songpa-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/gwangjin"
-            android:text="Gwangjin-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
+            android:layout_margin="5dp"
             android:id="@+id/nowon"
+            android:background="@color/pink"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
             android:text="Nowon-gu" />
 
     </TableRow>
 
-    <TableRow>
-
-        <Button
-            android:id="@+id/jung"
-            android:text="Jung-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/yangcheon"
-            android:text="Yangcheon-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/yeongdeungpo"
-            android:text="Yeongdeungpo-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </TableRow>
 
     <TableRow>
 
         <Button
-            android:id="@+id/mapo"
-            android:text="Mapo-gu"
+            android:layout_margin="5dp"
+            android:id="@+id/gangnam"
+            android:background="@color/pink"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
+            android:text="Gangnam-gu" />
 
         <Button
-            android:id="@+id/guro"
-            android:text="Guro-gu"
+            android:layout_margin="5dp"
+            android:id="@+id/gangdong"
+            android:background="@color/pink"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/seongbuk"
-            android:text="Seongbuk-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </TableRow>
-
-    <TableRow>
-
-        <Button
-            android:id="@+id/seodaemun"
-            android:text="Seodaemun-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/gwanak"
-            android:text="Gwanak-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/jungnang"
-            android:text="Jungnang-gu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
+            android:text="Gangdong-gu" />
 
     </TableRow>
 
@@ -174,44 +108,238 @@
     <TableRow>
 
         <Button
-            android:id="@+id/gangseo"
-            android:text="Gangseo-gu"
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
+            android:layout_weight="1"
+            android:id="@+id/songpa"
+            android:text="Songpa-gu"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
 
         <Button
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:id="@+id/seocho"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
+            android:text="Seocho-gu" />
+
+    </TableRow>
+    <TableRow>
+        <Button
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
+            android:layout_weight="1"
+            android:id="@+id/gwangjin"
+            android:text="Gwangjin-gu"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+        <Button
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:id="@+id/gangbuk"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
+            android:text="Gangbuk-gu" />
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:layout_margin="5dp"
+            android:background="@color/pink"
             android:id="@+id/dobong"
-            android:text="Dobong-gu"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
+            android:text="Dobong-gu" />
 
         <Button
-            android:id="@+id/dongdaemun"
-            android:text="Dongdaemun-gu"
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
+            android:id="@+id/gwanak"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Gwanak-gu" />
+
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
+            android:id="@+id/gangseo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Gangseo-gu" />
+
+        <Button
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
+            android:layout_weight="1"
+            android:id="@+id/yongsan"
+            android:text="Yongsan-gu "
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
     </TableRow>
 
     <TableRow>
 
         <Button
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
             android:id="@+id/dongjak"
-            android:text="Dongjak-gu"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/go_home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Home"
-            />
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Dongjak-gu" />
 
         <Button
-            android:id="@+id/go_next"
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:id="@+id/seongbuk"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Next"
-            />
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/sun_b"
+            android:text="Seongbuk-gu" />
+
     </TableRow>
 
+
+    <TableRow>
+
+        <Button
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
+            android:id="@+id/jungnang"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Jungnang-gu" />
+
+        <Button
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
+            android:id="@+id/seongdong"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Seongdong-gu" />
+
+
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
+            android:id="@+id/yangcheon"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Yangcheon-gu" />
+
+        <Button
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
+            android:id="@+id/geumcheon"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Geumcheon-gu" />
+
+    </TableRow>
+    <TableRow>
+        <Button
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
+            android:id="@+id/seodaemun"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Seodaemun-gu" />
+        <Button
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
+            android:id="@+id/eunpyeong"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Eunpyeong-gu" />
+    </TableRow>
+    <TableRow>
+
+        <Button
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
+            android:id="@+id/yeongdeungpo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Yeongdeungpo-gu" />
+
+        <Button
+            android:layout_margin="5dp"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
+            android:id="@+id/dongdaemun"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Dongdaemun-gu" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+
+            android:id="@+id/go_home"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
+            android:text="Home" />
+
+        <Button
+
+            android:id="@+id/go_next"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@color/pink"
+            android:fontFamily="@font/sun_b"
+            android:text="Next" />
+    </TableRow>
 </TableLayout>
