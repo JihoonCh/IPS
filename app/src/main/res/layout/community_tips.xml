@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin = "10dp"
     tools:context=".CTipsActivity"
     android:background="@color/orange1">
     <TextView
@@ -51,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
-            android:background="@color/pink"
+            android:background="@color/yellow12"
             android:text="COMMUNITY" />
         <Button
             android:layout_alignParentBottom="true"

@@ -9,45 +9,53 @@
         android:textSize="30dp"
         android:gravity="center"
         android:text="Community"
+        android:textColor="@color/brown"
         android:fontFamily="@font/sun_b"/>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="40dp">
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/btnTips"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_weight="1"
-            android:textSize="30dp"
+            android:layout_width="200dp"
+            android:layout_height="130dp"
+            android:layout_above="@+id/btnReviews"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="30dp"
             android:fontFamily="@font/sun_b"
-            android:text="Tips/Etiquette"></Button>
+            android:text="Tips/Etiquette"
+            android:background="@color/brown"
+            android:textColor="@color/brown1"
+            android:textSize="30dp"></Button>
 
         <Button
             android:id="@+id/btnReviews"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_weight="1"
-            android:textSize="30dp"
+            android:layout_width="200dp"
+            android:layout_height="130dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:fontFamily="@font/sun_b"
-            android:text="Food Reviews"></Button>
+            android:background="@color/brown"
+            android:textColor="@color/brown1"
+            android:text="Food Reviews"
+
+            android:textSize="30dp"></Button>
 
         <Button
             android:id="@+id/btnRes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_weight="1"
-            android:textSize="30dp"
+            android:layout_width="200dp"
+            android:layout_height="130dp"
+            android:layout_below="@+id/btnReviews"
+            android:layout_centerHorizontal="true"
             android:fontFamily="@font/sun_b"
-            android:text="Good place"></Button>
+            android:text="Good place"
+            android:textColor="@color/brown1"
+            android:background="@color/brown"
+            android:layout_margin="30dp"
+            android:textSize="30dp"></Button>
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -63,7 +71,8 @@
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
             android:text="COMMUNITY"
-            android:background="@color/pink"/>
+            android:textColor="@color/brown"
+            android:background="@color/yellow12"/>
 
         <Button
             android:id="@+id/btnHome"
@@ -74,7 +83,8 @@
             android:layout_weight="1"
             android:fontFamily="@font/sun_b"
             android:text="HOME"
-            android:background="@color/pink"/>
+            android:textColor="@color/brown"
+            android:background="@color/yellow12"/>
 
         <Button
             android:id="@+id/btnMyPage"
@@ -85,7 +95,8 @@
             android:fontFamily="@font/sun_b"
             android:layout_weight="1"
             android:text="MYPAGE"
-            android:background="@color/pink"/>
+            android:textColor="@color/brown"
+            android:background="@color/yellow12"/>
 
     </LinearLayout>
 </RelativeLayout>

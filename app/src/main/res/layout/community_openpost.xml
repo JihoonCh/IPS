@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/orange1">
 
     <LinearLayout
         android:layout_width="372dp"
@@ -15,14 +16,16 @@
             android:layout_width="match_parent"
             android:layout_height="114dp"
             android:textSize="30sp"
-            tools:text="Title: " />
+            tools:text="Title: "
+            android:fontFamily="@font/sun_b"/>
 
         <TextView
             android:id="@+id/postContent"
             android:layout_width="match_parent"
             android:layout_height="437dp"
             android:textSize="17sp"
-            tools:text="Content: " />
+            tools:text="Content: "
+            android:fontFamily="@font/sun_b"/>
     </LinearLayout>
 
 </RelativeLayout>
