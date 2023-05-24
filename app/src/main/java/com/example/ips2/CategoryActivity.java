@@ -75,7 +75,7 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
         if (lastClickedButton != null) {
             lastClickedButton.setBackgroundColor(Color.LTGRAY);
         }
-        clickedButton.setBackgroundColor(Color.YELLOW);
+        clickedButton.setBackgroundColor(Color.parseColor("#BB86FC"));
         lastClickedButton = clickedButton;
         if (v != btnNext && v != btnHome) category = clickedButton.getText().toString();
     }

@@ -118,7 +118,7 @@ public class GuActivity extends AppCompatActivity implements View.OnClickListene
         if (lastClickedButton != null) {
             lastClickedButton.setBackgroundColor(Color.LTGRAY);
         }
-        clickedButton.setBackgroundColor(Color.YELLOW);
+        clickedButton.setBackgroundColor(Color.parseColor("#BB86FC"));
         lastClickedButton = clickedButton;
         if (v != btnNext && v != btnHome) address = clickedButton.getText().toString();
     }
