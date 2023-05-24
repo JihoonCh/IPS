@@ -43,11 +43,13 @@ public class CTipsActivity extends AppCompatActivity {
             public void onItemClick(TipPost tipPost) {
                 String title = tipPost.getTitle();
                 String content = tipPost.getContent();
+                String postId = tipPost.getPostId();
 
                 // 새로운 액티비티로 title과 content 전달
-                Intent intent = new Intent(CTipsActivity.this, OpenPostActivity.class);
+                Intent intent = new Intent(CTipsActivity.this, OpenPostTipActivity.class);
                 intent.putExtra("title", title);
                 intent.putExtra("content", content);
+                intent.putExtra("postId", postId);
                 startActivity(intent);
             }
         });
@@ -56,9 +58,8 @@ public class CTipsActivity extends AppCompatActivity {
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
+                list_tip.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-
                     TipPost tippost = dataSnapshot.getValue(TipPost.class);
                     list_tip.add(tippost);
                 }

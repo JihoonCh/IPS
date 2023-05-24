@@ -48,6 +48,9 @@
         <activity android:name=".SplashActivity"/>
         <activity android:name=".FavoriteMenuActivity"/>
         <activity android:name=".OpenPostActivity"/>
+        <activity android:name=".Comment"/>
+        <activity android:name=".OpenPostRecommendActivity"/>
+        <activity android:name=".OpenPostTipActivity"/>
 
 
     </application>

@@ -11,6 +11,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.ips2.R;
+import com.example.ips2.ReviewPost;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
@@ -20,7 +22,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class OpenPostActivity extends AppCompatActivity {
+public class OpenPostTipActivity extends AppCompatActivity {
 
     private TextView titleTextView, contentTextView;
     private EditText commentEditText;
@@ -49,7 +51,7 @@ public class OpenPostActivity extends AppCompatActivity {
 
         if (postId == null) {
             // postId가 null인 경우 처리
-            Toast.makeText(this, "댓글을 작성할 게시물을 찾을 수 없습니다.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "cannot find posts that have comments", Toast.LENGTH_SHORT).show();
             finish();
         } else {
             // 게시물 데이터를 불러와서 출력
@@ -67,27 +69,27 @@ public class OpenPostActivity extends AppCompatActivity {
     }
 
     private void loadPost() {
-        DatabaseReference postRef = databaseReference.child("Reviewposts").child(postId);
+        DatabaseReference postRef = databaseReference.child("Tipposts").child(postId);
         postRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    ReviewPost reviewPost = snapshot.getValue(ReviewPost.class);
-                    if (reviewPost != null) {
-                        String title = reviewPost.getTitle();
-                        String content = reviewPost.getContent();
+                    TipPost tipPost = snapshot.getValue(TipPost.class);
+                    if (tipPost != null) {
+                        String title = tipPost.getTitle();
+                        String content = tipPost.getContent();
                         titleTextView.setText(title);
                         contentTextView.setText(content);
                     }
                 } else {
-                    Toast.makeText(OpenPostActivity.this, "게시물을 찾을 수 없습니다.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(com.example.ips2.OpenPostTipActivity.this, "cannot find posts", Toast.LENGTH_SHORT).show();
                     finish();
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(OpenPostActivity.this, "게시물을 불러오는데 실패했습니다.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(com.example.ips2.OpenPostTipActivity.this, "Failed to load posts", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
@@ -108,7 +110,7 @@ public class OpenPostActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(OpenPostActivity.this, "댓글을 불러오는데 실패했습니다.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(com.example.ips2.OpenPostTipActivity.this, "Failed to load comments", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -130,5 +132,3 @@ public class OpenPostActivity extends AppCompatActivity {
         }
     }
 }
-
-

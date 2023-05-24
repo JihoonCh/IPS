@@ -43,11 +43,13 @@ public class CRecommendActivity extends AppCompatActivity {
             public void onItemClick(RecommendPost recommendPost) {
                 String title = recommendPost.getTitle();
                 String content = recommendPost.getContent();
+                String postId = recommendPost.getPostId();
 
                 // 새로운 액티비티로 title과 content 전달
-                Intent intent = new Intent(CRecommendActivity.this, OpenPostActivity.class);
+                Intent intent = new Intent(CRecommendActivity.this, OpenPostRecommendActivity.class);
                 intent.putExtra("title", title);
                 intent.putExtra("content", content);
+                intent.putExtra("postId", postId);
                 startActivity(intent);
             }
         });
@@ -57,9 +59,8 @@ public class CRecommendActivity extends AppCompatActivity {
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
+                list_rec.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-
                     RecommendPost recommendpost = dataSnapshot.getValue(RecommendPost.class);
                     list_rec.add(recommendpost);
                 }

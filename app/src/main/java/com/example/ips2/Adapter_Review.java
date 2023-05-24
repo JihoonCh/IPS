@@ -51,7 +51,6 @@ public class Adapter_Review extends RecyclerView.Adapter<Adapter_Review.MyViewHo
                 }
             }
         });
-
     }
 
     @Override
@@ -65,10 +64,8 @@ public class Adapter_Review extends RecyclerView.Adapter<Adapter_Review.MyViewHo
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
             title = itemView.findViewById(R.id.title);
             content = itemView.findViewById(R.id.content);
-
         }
     }
 }

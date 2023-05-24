@@ -20,7 +20,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class OpenPostActivity extends AppCompatActivity {
+public class OpenPostRecommendActivity extends AppCompatActivity {
 
     private TextView titleTextView, contentTextView;
     private EditText commentEditText;
@@ -67,27 +67,27 @@ public class OpenPostActivity extends AppCompatActivity {
     }
 
     private void loadPost() {
-        DatabaseReference postRef = databaseReference.child("Reviewposts").child(postId);
+        DatabaseReference postRef = databaseReference.child("Recommendposts").child(postId);
         postRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    ReviewPost reviewPost = snapshot.getValue(ReviewPost.class);
-                    if (reviewPost != null) {
-                        String title = reviewPost.getTitle();
-                        String content = reviewPost.getContent();
+                    RecommendPost recommendPost = snapshot.getValue(RecommendPost.class);
+                    if (recommendPost != null) {
+                        String title = recommendPost.getTitle();
+                        String content = recommendPost.getContent();
                         titleTextView.setText(title);
                         contentTextView.setText(content);
                     }
                 } else {
-                    Toast.makeText(OpenPostActivity.this, "게시물을 찾을 수 없습니다.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OpenPostRecommendActivity.this, "게시물을 찾을 수 없습니다.", Toast.LENGTH_SHORT).show();
                     finish();
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(OpenPostActivity.this, "게시물을 불러오는데 실패했습니다.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(OpenPostRecommendActivity.this, "게시물을 불러오는데 실패했습니다.", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
@@ -108,7 +108,7 @@ public class OpenPostActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(OpenPostActivity.this, "댓글을 불러오는데 실패했습니다.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(OpenPostRecommendActivity.this, "댓글을 불러오는데 실패했습니다.", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -130,5 +130,3 @@ public class OpenPostActivity extends AppCompatActivity {
         }
     }
 }
-
-

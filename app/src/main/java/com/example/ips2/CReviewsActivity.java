@@ -18,7 +18,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import android.util.Log;
-public class CReviewsActivity extends AppCompatActivity {
+
+public class CReviewsActivity extends AppCompatActivity implements Adapter_Review.OnItemClickListener {
 
     Button btnCommunity, btnHome, btnMypage, btnWrite;
 
@@ -38,27 +39,15 @@ public class CReviewsActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         list_rev = new ArrayList<>();
-        adapter_review = new Adapter_Review(this,list_rev, new Adapter_Review.OnItemClickListener() {
-            @Override
-            public void onItemClick(ReviewPost reviewPost) {
-                String title = reviewPost.getTitle();
-                String content = reviewPost.getContent();
-
-                // 새로운 액티비티로 title과 content 전달
-                Intent intent = new Intent(CReviewsActivity.this, OpenPostActivity.class);
-                intent.putExtra("title", title);
-                intent.putExtra("content", content);
-                startActivity(intent);
-            }
-        });
+        adapter_review = new Adapter_Review(this, list_rev, this);
         recyclerView.setAdapter(adapter_review);
 
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                list_rev.clear();
 
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     ReviewPost reviewpost = dataSnapshot.getValue(ReviewPost.class);
                     list_rev.add(reviewpost);
                 }
@@ -67,7 +56,7 @@ public class CReviewsActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Log.e("CReviewsActivity", "Failed to read value.", error.toException());
             }
         });
         // 버튼변수에 버튼객체 대입
@@ -109,5 +98,18 @@ public class CReviewsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    @Override
+    public void onItemClick(ReviewPost reviewPost) {
+        String title = reviewPost.getTitle();
+        String content = reviewPost.getContent();
+        String postId = reviewPost.getPostId();
+
+        // 새로운 액티비티로 title과 content, postId 전달
+        Intent intent = new Intent(CReviewsActivity.this, OpenPostActivity.class);
+        intent.putExtra("title", title);
+        intent.putExtra("content", content);
+        intent.putExtra("postId", postId);
+        startActivity(intent);
     }
 }
