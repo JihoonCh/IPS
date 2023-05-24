@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/brown1">
+    android:background="@color/orange1">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -10,7 +10,7 @@
         android:gravity="center"
         android:text="Community"
         android:paddingTop="10dp"
-        android:textColor="@color/brown2"
+        android:textColor="@color/hotpink"
         android:paddingBottom="10dp"
         android:fontFamily="@font/sun_b"/>
 
@@ -27,8 +27,8 @@
             android:layout_margin="30dp"
             android:fontFamily="@font/sun_b"
             android:text="Tips/Etiquette"
-            android:background="@color/brown2"
-            android:textColor="@color/brown1"
+            android:background="@color/pink"
+            android:textColor="@color/gray1"
             android:textSize="30dp"></Button>
 
         <Button
@@ -38,8 +38,8 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:fontFamily="@font/sun_b"
-            android:background="@color/brown2"
-            android:textColor="@color/brown1"
+            android:background="@color/pink"
+            android:textColor="@color/gray1"
             android:text="Food Reviews"
             android:textSize="30dp"></Button>
 
@@ -55,8 +55,8 @@
             android:layout_marginBottom="30dp"
             android:fontFamily="@font/sun_b"
             android:text="Good place"
-            android:background="@color/brown2"
-            android:textColor="@color/brown1"
+            android:background="@color/pink"
+            android:textColor="@color/gray1"
             android:textSize="30dp"></Button>
 
     </RelativeLayout>
@@ -65,42 +65,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
-
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom">
         <Button
-            android:id="@+id/btnCommunity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_weight="1"
+            android:id="@+id/btnCommunity"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
             android:text="COMMUNITY"
-            android:textColor="@color/white"
-            android:background="@color/yellow12"/>
-
+            android:layout_weight="1"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/gray1"
+            android:background="@color/pink"/>
         <Button
-            android:id="@+id/btnHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_weight="1"
+            android:id="@+id/btnHome"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
             android:text="HOME"
-            android:textColor="@color/white"
-            android:background="@color/yellow12"/>
-
+            android:layout_weight="1"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/gray1"
+            android:background="@color/pink"/>
         <Button
-            android:id="@+id/btnMyPage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/btnMyPage"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
             android:layout_weight="1"
             android:text="MYPAGE"
-            android:textColor="@color/white"
-            android:background="@color/yellow12"/>
-
+            android:textColor="@color/gray1"
+            android:background="@color/pink"/>
     </LinearLayout>
 </RelativeLayout>

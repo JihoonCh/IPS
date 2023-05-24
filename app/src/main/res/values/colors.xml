@@ -10,7 +10,6 @@
     <color name="pink">#FDCFBB</color>
     <color name="hotpink">#FF97A5</color>
     <color name="darkyellow">#e4b660</color>
-    <color name="orange2">#feb78d</color>
     <color name="orange1">#ffefb9</color>
     <color name="yellow">#ffb53c</color>
     <color name="coral">#feb78d</color>
@@ -19,4 +18,6 @@
     <color name="brown1">#c99c79</color>
     <color name="brown2">#a2684b</color>
     <color name="brown">#733d31</color>
+    <color name="gray">#717171</color>
+    <color name="gray1">#393939</color>
 </resources>

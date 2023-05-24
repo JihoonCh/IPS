@@ -15,7 +15,7 @@
         android:gravity="center"
         android:paddingBottom="10dp"
         android:fontFamily="@font/sun_b"
-        android:textColor="@color/brown"
+        android:textColor="@color/hotpink"
         android:text="Tips/Etiquette"/>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -37,8 +37,8 @@
         android:layout_gravity="right"
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/sun_b"
-        android:textColor="@color/brown"
-        android:background="@color/yellow12"
+        android:textColor="@color/gray1"
+        android:background="@color/pink"
         android:text="Write"></Button>
 
     <LinearLayout
@@ -54,9 +54,9 @@
             android:fontFamily="@font/sun_b"
             android:text="COMMUNITY"
             android:layout_weight="1"
-            android:textColor="@color/brown"
             android:layout_marginRight="20dp"
-            android:background="@color/yellow12"/>
+            android:textColor="@color/gray1"
+            android:background="@color/pink"/>
         <Button
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
@@ -67,8 +67,8 @@
             android:text="HOME"
             android:layout_weight="1"
             android:layout_marginRight="20dp"
-            android:textColor="@color/brown"
-            android:background="@color/yellow12"/>
+            android:textColor="@color/gray1"
+            android:background="@color/pink"/>
         <Button
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
@@ -78,8 +78,8 @@
             android:fontFamily="@font/sun_b"
             android:layout_weight="1"
             android:text="MYPAGE"
-            android:textColor="@color/brown"
-            android:background="@color/yellow12"/>
+            android:textColor="@color/gray1"
+            android:background="@color/pink"/>
     </LinearLayout>
 
 </LinearLayout>

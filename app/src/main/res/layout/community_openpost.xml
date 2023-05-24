@@ -18,7 +18,7 @@
             android:textSize="30sp"
             tools:text="Title: "
             android:fontFamily="@font/sun_b"
-            android:textColor="@color/brown"/>
+            android:textColor="@color/gray1"/>
 
         <TextView
             android:id="@+id/postContent"
@@ -27,7 +27,7 @@
             android:textSize="17sp"
             tools:text="Content: "
             android:fontFamily="@font/sun_b"
-            android:textColor="@color/brown"/>
+            android:textColor="@color/gray1"/>
     </LinearLayout>
 
 </RelativeLayout>

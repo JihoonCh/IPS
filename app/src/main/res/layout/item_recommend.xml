@@ -25,10 +25,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text ="Android"
+                android:padding="10dp"
+                android:textSize="15dp"
                 android:fontFamily="@font/sun_b"
                 ></TextView>
             <TextView
+                android:padding="5dp"
                 android:id ="@+id/content"
+                android:textSize="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text ="RecyclerView"

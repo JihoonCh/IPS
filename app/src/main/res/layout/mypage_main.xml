@@ -17,18 +17,18 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:fontFamily="@font/sun_b"
+            android:textColor="@color/hotpink"
             android:text="My Page"/>
 
-
         <Button
-            android:id="@+id/btnArticle"
+            android:id="@+id/btnBookmark"
             android:padding="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
-            android:text="My Articles"
-            android:textColor="@color/brown"
-            android:background="@color/yellow12">
+            android:text="My Favorites"
+            android:textColor="@color/gray1"
+            android:background="@color/pink">
         </Button>
         <Button
             android:id="@+id/btnScrap"
@@ -37,18 +37,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
             android:text="Scrapped Articles"
-            android:textColor="@color/brown"
-            android:background="@color/yellow12">
-        </Button>
-        <Button
-            android:id="@+id/btnBookmark"
-            android:padding="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/sun_b"
-            android:text="My Favorites"
-            android:textColor="@color/brown"
-            android:background="@color/yellow12">
+            android:textColor="@color/gray1"
+            android:background="@color/pink">
         </Button>
 
         <Button
@@ -58,8 +48,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/sun_b"
             android:text="LogOut"
-            android:textColor="@color/brown"
-            android:background="@color/yellow12">
+            android:textColor="@color/gray1"
+            android:background="@color/pink">
         </Button>
 
     </LinearLayout>
@@ -76,8 +66,8 @@
             android:text=" COMMUNITY"
             android:paddingRight="10dp"
             android:fontFamily="@font/sun_b"
-            android:textColor="@color/brown"
-            android:background="@color/yellow12"/>
+            android:textColor="@color/gray1"
+            android:background="@color/pink"/>
 
         <Button
             android:id="@+id/btnHome"
@@ -87,8 +77,8 @@
             android:layout_centerHorizontal="true"
             android:text="HOME"
             android:fontFamily="@font/sun_b"
-            android:textColor="@color/brown"
-            android:background="@color/yellow12"/>
+            android:textColor="@color/gray1"
+            android:background="@color/pink"/>
 
         <Button
             android:id="@+id/btnMyPage"
@@ -98,8 +88,8 @@
             android:layout_alignParentBottom="true"
             android:text="MYPAGE"
             android:fontFamily="@font/sun_b"
-            android:textColor="@color/brown"
-            android:background="@color/yellow12"/>
+            android:textColor="@color/gray1"
+            android:background="@color/pink"/>
     </RelativeLayout>
 
 </RelativeLayout>
