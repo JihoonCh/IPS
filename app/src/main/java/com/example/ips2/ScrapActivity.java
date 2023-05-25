@@ -18,6 +18,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class ScrapActivity extends AppCompatActivity {
@@ -27,11 +30,16 @@ public class ScrapActivity extends AppCompatActivity {
     private List<ScrapPost> scrapList;
     private DatabaseReference databaseReference;
     private FirebaseUser currentUser;
+    private Button btnCommunity, btnHome, btnMypage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scrap);
+
+        btnCommunity = (Button) findViewById(R.id.btnCommunity);
+        btnHome = (Button) findViewById(R.id.btnHome);
+        btnMypage = (Button) findViewById(R.id.btnMyPage);
 
         scrapRecyclerView = findViewById(R.id.scrapRecyclerView);
         scrapRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -88,6 +96,33 @@ public class ScrapActivity extends AppCompatActivity {
                     intent.putExtra("postId", postId);
                     startActivity(intent);
                 }
+            }
+        });
+
+        // 커뮤니티 화면
+        btnCommunity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),CommunityActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 홈화면
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        // 마이페이지 연결
+        btnMypage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),SubActivity.class);
+                startActivity(intent);
             }
         });
     }
