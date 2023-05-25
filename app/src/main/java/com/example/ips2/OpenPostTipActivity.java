@@ -1,9 +1,11 @@
 package com.example.ips2;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +34,8 @@ public class OpenPostTipActivity extends AppCompatActivity {
     private FirebaseUser currentUser;
     private String postId;
 
+    private ImageView addToScrapImage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +46,7 @@ public class OpenPostTipActivity extends AppCompatActivity {
         commentEditText = findViewById(R.id.commentEditText);
         commentButton = findViewById(R.id.commentButton);
         commentsLayout = findViewById(R.id.commentsLayout);
+        addToScrapImage = findViewById(R.id.addToScrapImage);
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
         currentUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -65,7 +70,79 @@ public class OpenPostTipActivity extends AppCompatActivity {
             });
             // 해당 게시물의 댓글을 불러와서 출력
             loadComments();
+            // 이미 scrap된 글인 경우 staricon으로 ImageView 설정
+            if (isAlreadyScrapped()) {
+                Drawable newDrawable = getResources().getDrawable(R.drawable.staricon);
+                addToScrapImage.setImageDrawable(newDrawable);
+            } else {
+                Drawable newDrawable = getResources().getDrawable(R.drawable.staricon_before);
+                addToScrapImage.setImageDrawable(newDrawable);
+            }
+
+            // 즐겨찾기 추가 버튼 클릭 리스너
+            addToScrapImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (!isAlreadyScrapped()) {
+                        addToScrapped();
+                        // 변경할 이미지 리소스
+                        Drawable newDrawable = getResources().getDrawable(R.drawable.staricon);
+                        // ImageView의 srcCompat 변경
+                        addToScrapImage.setImageDrawable(newDrawable);
+                    } else {
+                        removeFromScrapped();
+                        // 변경할 이미지 리소스
+                        Drawable newDrawable = getResources().getDrawable(R.drawable.staricon_before);
+                        // ImageView의 srcCompat 변경
+                        addToScrapImage.setImageDrawable(newDrawable);
+                    }
+                }
+            });
         }
+    }
+    private boolean isAlreadyScrapped() {
+        DatabaseReference scrappedRef = databaseReference.child("Scrap").child(currentUser.getUid());
+        scrappedRef.orderByChild("postId").equalTo(postId).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    // 이미 scrap된 글인 경우
+                    // ImageView의 이미지를 staricon으로 변경
+                    Drawable newDrawable = getResources().getDrawable(R.drawable.staricon);
+                    addToScrapImage.setImageDrawable(newDrawable);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(OpenPostTipActivity.this, "Failed to check if post is already scrapped", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        return addToScrapImage.getDrawable() != null && addToScrapImage.getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.staricon).getConstantState());
+    }
+
+    private void removeFromScrapped() {
+        DatabaseReference scrappedRef = databaseReference.child("Scrap").child(currentUser.getUid());
+        scrappedRef.orderByChild("postId").equalTo(postId).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                        snapshot.getRef().removeValue();
+                    }
+                    Toast.makeText(OpenPostTipActivity.this, "Post removed from scrap", Toast.LENGTH_SHORT).show();
+                    Drawable newDrawable = getResources().getDrawable(R.drawable.staricon_before);
+                    // ImageView의 srcCompat 변경
+                    addToScrapImage.setImageDrawable(newDrawable);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(OpenPostTipActivity.this, "Failed to remove post from scrap", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void loadPost() {
@@ -82,7 +159,7 @@ public class OpenPostTipActivity extends AppCompatActivity {
                         contentTextView.setText(content);
                     }
                 } else {
-                    Toast.makeText(com.example.ips2.OpenPostTipActivity.this, "cannot find posts", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(com.example.ips2.OpenPostTipActivity.this, "cannot !!!! posts", Toast.LENGTH_SHORT).show();
                     finish();
                 }
             }
@@ -130,5 +207,57 @@ public class OpenPostTipActivity extends AppCompatActivity {
             commentEditText.setText("");
             addCommentView(commentText);
         }
+    }
+    private void addToScrapped() {
+        DatabaseReference scrappedRef = databaseReference.child("Scrap").child(currentUser.getUid());
+
+        DatabaseReference postRef = databaseReference.child("Tipposts").child(postId);
+        postRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    // Check if the post is already scrapped
+                    scrappedRef.orderByChild("postId").equalTo(postId).addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.exists()) {
+                                Toast.makeText(OpenPostTipActivity.this, "Post is already scrapped", Toast.LENGTH_SHORT).show();
+                            } else {
+                                ReviewPost reviewPost = snapshot.getValue(ReviewPost.class);
+                                if (reviewPost != null) {
+                                    String title = reviewPost.getTitle();
+                                    String content = reviewPost.getContent();
+                                    int whichPost = 3;
+
+                                    ScrapPost scrapPost = new ScrapPost(postId, title, content, whichPost);
+                                    scrapPost.setPostId(postId);
+                                    scrapPost.setTitle(title);
+                                    scrapPost.setContent(content);
+                                    scrapPost.setWhichPost(whichPost);
+
+                                    String scrapPostId = scrappedRef.push().getKey();
+                                    scrappedRef.child(scrapPostId).setValue(scrapPost);
+                                    Toast.makeText(OpenPostTipActivity.this, "Post scrapped", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Toast.makeText(OpenPostTipActivity.this, "Failed to check if post is already scrapped", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                } else {
+                    Toast.makeText(OpenPostTipActivity.this, "Cannot find the post", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(OpenPostTipActivity.this, "Failed to load the post", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
     }
 }

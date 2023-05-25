@@ -4,15 +4,17 @@ public class ScrapPost {
     private String postId;
     private String title;
     private String content;
+    public int whichPost;
 
     public ScrapPost() {
-        // Default constructor required for calls to DataSnapshot.getValue(ScrapPost.class)
+        // 기본 생성자
     }
 
-    public ScrapPost(String postId, String title, String content) {
+    public ScrapPost(String postId, String title, String content, int whichPost) {
         this.postId = postId;
         this.title = title;
         this.content = content;
+        this.whichPost = whichPost;
     }
 
     public String getPostId() {
@@ -37,5 +39,13 @@ public class ScrapPost {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public void setWhichPost(int whichPost) {
+        this.whichPost = whichPost;
+    }
+
+    public int whichPost() {
+        return whichPost;
     }
 }

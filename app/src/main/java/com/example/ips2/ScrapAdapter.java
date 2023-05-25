@@ -15,7 +15,7 @@ public class ScrapAdapter extends RecyclerView.Adapter<ScrapAdapter.ViewHolder> 
     private OnItemClickListener onItemClickListener;
 
     public interface OnItemClickListener {
-        void onItemClick(ScrapPost scrapPost);
+        void onItemClick(ScrapPost scrapPost, int whichPost);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {
@@ -60,7 +60,8 @@ public class ScrapAdapter extends RecyclerView.Adapter<ScrapAdapter.ViewHolder> 
                     int position = getAdapterPosition();
                     if (position != RecyclerView.NO_POSITION && onItemClickListener != null) {
                         ScrapPost clickedScrapPost = scrapList.get(position);
-                        onItemClickListener.onItemClick(clickedScrapPost);
+                        int whichPost = clickedScrapPost.whichPost(); // 추천글 여부 가져오기
+                        onItemClickListener.onItemClick(clickedScrapPost, whichPost);
                     }
                 }
             });

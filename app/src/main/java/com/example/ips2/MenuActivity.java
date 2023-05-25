@@ -24,6 +24,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import android.graphics.Color;
 
 public class MenuActivity extends AppCompatActivity {
     private ListView menuList;  //메뉴들을 출력할 리스트뷰
@@ -58,10 +59,6 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //즐겨찾기 목록에 추가하는 함수 호출
                 addToFavorites(selectedResName);
-                // 변경할 이미지 리소스
-                Drawable newDrawable = getResources().getDrawable(R.drawable.staricon);
-                // ImageView의 srcCompat 변경
-                addFav.setImageDrawable(newDrawable);
             }
         });
 
@@ -128,9 +125,23 @@ public class MenuActivity extends AppCompatActivity {
 
                 //즐겨찾기에 추가됐음을 알리는 팝업
                 Toast.makeText(MenuActivity.this, "Added to favorites", Toast.LENGTH_SHORT).show();
+                // 변경할 이미지 리소스
+                Drawable newDrawable = getResources().getDrawable(R.drawable.heart);
+                // ImageView의 srcCompat 변경
+                addFav.setImageDrawable(newDrawable);
             } else {
-                //이미 즐겨찾기에 존재함을 알리는 팝업
-                Toast.makeText(MenuActivity.this, "Restaurant is already in favorites", Toast.LENGTH_SHORT).show();
+                // Remove the restaurant from favorites
+                favoritesArray = removeRestaurantFromFavorites(favoritesArray, selectedResName);
+
+                // Update the favorites file
+                saveFavoritesToFile(favoritesArray);
+
+                // Show toast message indicating the restaurant is removed from favorites
+                Toast.makeText(MenuActivity.this, "Removed from favorites", Toast.LENGTH_SHORT).show();
+
+                // Change the image resource of addFav to staricon_before
+                Drawable newDrawable = getResources().getDrawable(R.drawable.heart_before);
+                addFav.setImageDrawable(newDrawable);
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -166,6 +177,25 @@ public class MenuActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    private JSONArray removeRestaurantFromFavorites(JSONArray favoritesArray, String resName) {
+        JSONArray updatedFavoritesArray = new JSONArray();
+
+        for (int i = 0; i < favoritesArray.length(); i++) {
+            try {
+                JSONObject favoriteObject = favoritesArray.getJSONObject(i);
+                if (favoriteObject.has("ResName")) {
+                    String favoriteResName = favoriteObject.getString("ResName");
+                    if (!favoriteResName.equals(resName)) {
+                        updatedFavoritesArray.put(favoriteObject);
+                    }
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return updatedFavoritesArray;
     }
 
     private boolean isRestaurantInFavorites(JSONArray favoritesArray, String resName) {

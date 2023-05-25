@@ -70,13 +70,24 @@ public class ScrapActivity extends AppCompatActivity {
         // Set the item click listener for ScrapAdapter
         scrapAdapter.setOnItemClickListener(new ScrapAdapter.OnItemClickListener() {
             @Override
-            public void onItemClick(ScrapPost scrapPost) {
+            public void onItemClick(ScrapPost scrapPost, int whichPost) {
                 String postId = scrapPost.getPostId();
 
-                // OpenPostActivity로 이동하면서 postId 전달
-                Intent intent = new Intent(ScrapActivity.this, OpenPostActivity.class);
-                intent.putExtra("postId", postId);
-                startActivity(intent);
+                if (whichPost == 1) {
+                    // OpenPostActivity로 이동하면서 postId 전달
+                    Intent intent = new Intent(ScrapActivity.this, OpenPostActivity.class);
+                    intent.putExtra("postId", postId);
+                    startActivity(intent);
+                } else if (whichPost == 2) {
+                    // OpenPostRecommendActivity로 이동하면서 postId 전달
+                    Intent intent = new Intent(ScrapActivity.this, OpenPostRecommendActivity.class);
+                    intent.putExtra("postId", postId);
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(ScrapActivity.this, OpenPostTipActivity.class);
+                    intent.putExtra("postId", postId);
+                    startActivity(intent);
+                }
             }
         });
     }

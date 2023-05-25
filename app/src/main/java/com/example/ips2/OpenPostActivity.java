@@ -226,11 +226,13 @@ public class OpenPostActivity extends AppCompatActivity {
                                 if (reviewPost != null) {
                                     String title = reviewPost.getTitle();
                                     String content = reviewPost.getContent();
+                                    int whichPost = 1;
 
-                                    ScrapPost scrapPost = new ScrapPost();
+                                    ScrapPost scrapPost = new ScrapPost(postId, title, content, whichPost);
                                     scrapPost.setPostId(postId);
                                     scrapPost.setTitle(title);
                                     scrapPost.setContent(content);
+                                    scrapPost.setWhichPost(whichPost);
 
                                     String scrapPostId = scrappedRef.push().getKey();
                                     scrappedRef.child(scrapPostId).setValue(scrapPost);

@@ -58,10 +58,6 @@ public class FavoriteMenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //즐겨찾기 목록에서 제거하는 함수 호출
                 removeFromFavorites(selectedResName);
-                // 변경할 이미지 리소스
-                Drawable newDrawable = getResources().getDrawable(R.drawable.staricon_before);
-                // ImageView의 srcCompat 변경
-                addFav.setImageDrawable(newDrawable);
             }
         });
 
@@ -111,6 +107,8 @@ public class FavoriteMenuActivity extends AppCompatActivity {
 
     private void removeFromFavorites(String resName) {
         try {
+            JSONObject favoriteObject = new JSONObject();
+            favoriteObject.put("ResName", resName);
             //기존의 즐겨찾기 목록 파일을 불러옴
             JSONArray favoritesArray = loadFavoritesFromFile();
 
@@ -125,9 +123,23 @@ public class FavoriteMenuActivity extends AppCompatActivity {
 
                 //즐겨찾기에서 제거했음을 알리는 팝업
                 Toast.makeText(FavoriteMenuActivity.this, "Removed from favorites", Toast.LENGTH_SHORT).show();
+                // 변경할 이미지 리소스
+                Drawable newDrawable = getResources().getDrawable(R.drawable.heart_before);
+                // ImageView의 srcCompat 변경
+                addFav.setImageDrawable(newDrawable);
             } else {
-                //즐겨찾기 목록에 없음을 알리는 팝업
-                Toast.makeText(FavoriteMenuActivity.this, "Restaurant is not in favorites", Toast.LENGTH_SHORT).show();
+                //식당을 즐겨찾기에 삽입
+                favoritesArray.put(favoriteObject);
+
+                //업데이트된 즐겨찾기 목록을 파일에 저장
+                saveFavoritesToFile(favoritesArray);
+
+                //즐겨찾기에 추가됐음을 알리는 팝업
+                Toast.makeText(FavoriteMenuActivity.this, "Added to favorites", Toast.LENGTH_SHORT).show();
+                // 변경할 이미지 리소스
+                Drawable newDrawable = getResources().getDrawable(R.drawable.heart);
+                // ImageView의 srcCompat 변경
+                addFav.setImageDrawable(newDrawable);
             }
         } catch (JSONException e) {
             e.printStackTrace();
