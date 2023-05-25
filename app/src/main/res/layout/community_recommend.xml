@@ -16,7 +16,7 @@
         android:textColor="@color/hotpink"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:text="Good Place"/>
+        android:text="FoodMate"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id = "@+id/rv_rec"
