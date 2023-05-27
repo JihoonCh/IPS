@@ -42,7 +42,7 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {   //어떤 카테고리 선택했는지 식당액티비티에 전달하며 호출함
+            public void onClick(View v) {   //어떤 카테고리 선택했는지 식당 액티비티에 전달하며 호출
                 Intent intent = new Intent(CategoryActivity.this, RestaurantActivity.class);
                 intent.putExtra("Food Category", category);
                 intent.putExtra("User Address", user_address);
